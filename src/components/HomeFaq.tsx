@@ -59,7 +59,7 @@ export function HomeFaq({
 }: {
   title: string;
   subtitle: string;
-  items: FaqItem[];
+  items: readonly FaqItem[];
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const baseId = useId();

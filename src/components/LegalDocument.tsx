@@ -84,7 +84,7 @@ function enhance(children: ReactNode, compact = false) {
       const lead = match[1];
       const rest = child.props.children.slice(match[0].length);
       const sub = /^[a-z]\)$/i.test(lead);
-      return cloneElement(child as ReactElement<{ className?: string; key?: string }>, {
+      return cloneElement(child as ReactElement<{ className?: string; children?: ReactNode }>, {
         key: child.key ?? `legal-${index}`,
         className: sub
           ? "ml-6 grid grid-cols-[2.25rem_minmax(0,1fr)] gap-3 text-base leading-7 text-gray-300 sm:ml-10"
@@ -148,7 +148,7 @@ export function LegalDocument({
     if (!showToc) return;
     const root = articleRef.current;
     if (!root) return;
-    const headings = [...root.querySelectorAll("h2")];
+    const headings = Array.from(root.querySelectorAll("h2"));
     if (!headings.length) return;
 
     const mark = () => {

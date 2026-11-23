@@ -80,7 +80,7 @@ export function LegalModal({
 
     function getFocusable() {
       if (!dialog) return [] as HTMLElement[];
-      return [...dialog.querySelectorAll<HTMLElement>(FOCUSABLE)].filter(
+      return Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE)).filter(
         (el) => !el.hasAttribute("disabled") && el.tabIndex !== -1
       );
     }

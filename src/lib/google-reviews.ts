@@ -196,7 +196,7 @@ function parsePublicReviews(html: string): { rating?: number; reviewCount?: numb
   let rating: number | undefined;
   let reviewCount: number | undefined;
 
-  for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
+  for (const match of Array.from(html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi))) {
     try {
       collectJsonLd(JSON.parse(decodeHtml(match[1])), (found) => {
         if (found.rating != null) rating = found.rating;
