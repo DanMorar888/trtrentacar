@@ -1,0 +1,2 @@
+# Pune aici imaginile mașinilor (ex: dacia-logan.jpg, skoda-kamiq.jpg).
+# Actualizează câmpul "image" în src/data/cars.ts cu calea, ex: "/images/cars/dacia-logan.jpg"

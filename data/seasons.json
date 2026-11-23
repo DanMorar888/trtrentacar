@@ -1,0 +1,29 @@
+[
+  {
+    "id": "mwekylk8q1m8sc0goko",
+    "type": "full",
+    "startMonth": 6,
+    "startDay": 15,
+    "endMonth": 9,
+    "endDay": 5,
+    "name": "Vară"
+  },
+  {
+    "id": "mwekyxvvd1zwl04m116",
+    "type": "extra",
+    "startMonth": 10,
+    "startDay": 1,
+    "endMonth": 12,
+    "endDay": 5,
+    "name": "Toamnă"
+  },
+  {
+    "id": "mwekzem45l9cqlkz9ch",
+    "type": "full",
+    "startMonth": 12,
+    "startDay": 20,
+    "endMonth": 1,
+    "endDay": 3,
+    "name": "Anul Nou"
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "fetchedAt": "2026-11-23T05:40:04.315Z",
+  "place": {
+    "name": "Transylvania Rent & Tourism",
+    "rating": 5,
+    "reviewCount": 82,
+    "mapsUrl": "https://www.google.com/maps/place/Transylvania+Rent+%26+Tourism/@46.7822489,23.6978928,17z/data=!3m1!4b1!4m6!3m5!1s0x47490b6fea8a29d1:0xa1adb8e8c37ad6f9!8m2!3d46.7822489!4d23.6978928!16s%2Fg%2F11yb__2n2b"
+  },
+  "reviews": [
+    {
+      "name": "Andrada Hoca",
+      "stars": 5,
+      "age": {
+        "amount": 4,
+        "unit": "month"
+      },
+      "text": "Am avut o experiență excelentă cu TRT. Serviciile de închiriere m-au lasat placut surprinsa au fost foarte rapide și profesioniste. Personalu foarte corect și respectuos am închiriat o mașină și când a venit să ma ia de la aeroport și-a dat seama că o roată se tot dezumflă și mi-a oferit instant posibilitatea de a lua alta mașină la același preț și chiar mai noua de cat ceea care o închiriasem și cutie automata dar mi-a dat și posibilitatea de a merge cu mine la vulcanizare in cazul în care vroiam sa răman la mașina care o închiriasem la început.Sincer  recomand cu încredere această firmă oricarui  are nevoie de un serviciu de închiriere de calitate! Voi apela din nou\ncu siguranță."
+    },
+    {
+      "name": "alina tarta",
+      "stars": 5,
+      "age": {
+        "amount": 5,
+        "unit": "month"
+      },
+      "text": "Am venit acasa din sua si am cautat o masina de inchiriat. Janos a fost asa dragut si ne-a adus masina si ne-a si dus inapoi la destinatie. Pretul a fost foarte accesibil asa ca il recomand daca ai nevoie de o masina automata."
+    },
+    {
+      "name": "Carla Roberta",
+      "stars": 5,
+      "age": {
+        "amount": 5,
+        "unit": "month"
+      },
+      "text": "Am rămas extrem de plăcut surprinsă de serviciile oferite! Dl. Janoș Botar este un profesionist desăvârșit, de o amabilitate rară și gata să te ajute în orice moment. Nu cunoșteam bine Clujul și am fost la un pas de a pierde zborul spre aeroport. Datorită promptitudinii și implicării sale, totul s-a rezolvat extrem de rapid și am ajuns la timp. Recomand cu toată încrederea și cu siguranță voi mai apela la serviciile dumnealui!"
+    },
+    {
+      "name": "Dumitru Blanariu",
+      "stars": 5,
+      "age": {
+        "amount": 2,
+        "unit": "month"
+      },
+      "text": "Recomand cu toată încrederea TRT pentru închiriere\nServicii de calitate 10+++\nVom apela fără ezitare la serviciile voastre și in viitor\nMULȚUMIM Janos"
+    },
+    {
+      "name": "Daniel Ungurianu",
+      "stars": 5,
+      "age": {
+        "amount": 6,
+        "unit": "month"
+      },
+      "text": "A fost o experienta plăcută, pare a fi o gama variata de masini, inclusiv accesibile ca pret. Mulțumiri lui Janos pentru tot ajutorul oferit pe întreg procesul. Voi reveni cu siguranță."
+    }
+  ]
+}

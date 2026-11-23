@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #902790;
+  --primary-dark: #6d1c6d;
+  --accent: #1a1a2e;
+}
+
+body {
+  @apply bg-dark text-gray-100 antialiased;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Formulare: text lizibil în câmpuri pe fundal deschis (evită moștenirea text-gray-100 de la body) */
+input:not([type="hidden"]):not([class*="text-gray"]),
+select:not([class*="text-gray"]),
+textarea:not([class*="text-gray"]) {
+  color: #111827; /* gray-900 */
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-primary-dark hover:shadow focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-900;
+  }
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center rounded-lg bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1fa855] hover:shadow focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-slate-900;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-primary px-5 py-2.5 text-sm font-medium text-primary transition hover:bg-primary hover:text-white focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-900;
+  }
+  .container-narrow {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .section-title {
+    @apply text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl;
+  }
+  .section-title-light {
+    @apply section-title text-gray-900;
+  }
+  .section-title-dark {
+    @apply text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl;
+  }
+  .text-body {
+    @apply text-base leading-relaxed text-gray-700;
+  }
+  .text-body-dark {
+    @apply text-base leading-relaxed text-gray-300;
+  }
+  .key-info {
+    @apply rounded-lg border border-primary/30 bg-primary/10 px-3 py-2 text-sm font-medium text-gray-800;
+  }
+  .key-info-dark {
+    @apply rounded-lg border border-primary/40 bg-primary/20 px-3 py-2 text-sm font-medium text-white;
+  }
+  .price-block {
+    @apply rounded-lg bg-gray-50 px-4 py-3 ring-1 ring-gray-200/80;
+  }
+  .section-white {
+    @apply bg-white text-gray-900;
+  }
+  .section-dark {
+    @apply bg-dark text-gray-100;
+  }
+  /* Fundal închis. Poza de hero e randată cu next/image doar pe paginile care o folosesc. */
+  .hero-home-bg,
+  .cta-delivery-bg,
+  .contact-reservation-bg {
+    background-color: rgb(15, 23, 42);
+  }
+}
+
+/* Placeholder images */
+.car-placeholder,
+.blog-placeholder {
+  @apply flex items-center justify-center bg-gray-200 text-gray-500;
+}
+
+/* Calendar dropdown – în stil cu restul formularului (colțuri rotunjite, borduri, font) */
+.date-picker-dropdown .rdp-root {
+  --rdp-accent-color: var(--primary);
+  --rdp-accent-background-color: rgba(234, 88, 12, 0.15);
+  --rdp-day_button-border-radius: 0.5rem;
+  --rdp-day-height: 2.5rem;
+  --rdp-day-width: 2.5rem;
+  --rdp-day_button-height: 2.25rem;
+  --rdp-day_button-width: 2.25rem;
+  --rdp-nav_button-height: 2rem;
+  --rdp-nav_button-width: 2rem;
+  --rdp-nav-height: 2.5rem;
+  font-family: inherit;
+  font-size: 0.9375rem;
+}
+.date-picker-dropdown .rdp-root .rdp-month_caption {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+.date-picker-dropdown .rdp-root .rdp-weekday {
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.date-picker-dropdown .rdp-root .rdp-day_button {
+  border: 1px solid #e5e7eb;
+  color: #111827;
+  font-weight: 500;
+}
+.date-picker-dropdown .rdp-root .rdp-day_button:hover {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+.date-picker-dropdown .rdp-root .rdp-day_selected .rdp-day_button,
+.date-picker-dropdown .rdp-root .rdp-day_selected .rdp-day_button:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+.date-picker-dropdown .rdp-root .rdp-day_today .rdp-day_button {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.date-picker-dropdown .rdp-root .rdp-nav_button {
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+}
+.date-picker-dropdown .rdp-root .rdp-nav_button:hover {
+  background-color: #f3f4f6;
+}
+.date-picker-dropdown .rdp-root .rdp-day_outside {
+  opacity: 0.4;
+}
+.date-picker-dropdown .rdp-root .rdp-day_disabled .rdp-day_button {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

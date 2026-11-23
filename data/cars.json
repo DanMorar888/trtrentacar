@@ -1,0 +1,1536 @@
+[
+  {
+    "id": "trt-clio",
+    "slug": "renault-clio",
+    "name": "Renault Clio",
+    "category": "economy",
+    "categoryLabel": "Economic",
+    "pricePerDay": 32,
+    "price3Days": 96,
+    "guarantee": 300,
+    "year": 2017,
+    "engine": "0.9 TCe",
+    "fuel": "Benzină",
+    "transmission": "Manuală",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 5,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth"
+    ],
+    "image": "/images/cars/renault-clio-01.jpg",
+    "gallery": [
+      "/images/cars/renault-clio-02.jpg",
+      "/images/cars/renault-clio-03.jpg",
+      "/images/cars/renault-clio-04.jpg",
+      "/images/cars/renault-clio-05.jpg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 32
+      },
+      "4-9": {
+        "pricePerDay": 25
+      },
+      "10-15": {
+        "pricePerDay": 24
+      },
+      "16-21": {
+        "pricePerDay": 24
+      },
+      "22-30": {
+        "pricePerDay": 23
+      },
+      "31+": {
+        "pricePerDay": 20
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 32
+        },
+        "4-9": {
+          "pricePerDay": 25
+        },
+        "10-15": {
+          "pricePerDay": 24
+        },
+        "16-21": {
+          "pricePerDay": 24
+        },
+        "22-30": {
+          "pricePerDay": 23
+        },
+        "31+": {
+          "pricePerDay": 20
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 28
+        },
+        "4-9": {
+          "pricePerDay": 25
+        },
+        "10-15": {
+          "pricePerDay": 24
+        },
+        "16-21": {
+          "pricePerDay": 23
+        },
+        "22-30": {
+          "pricePerDay": 21
+        },
+        "31+": {
+          "pricePerDay": 19
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 25
+        },
+        "4-9": {
+          "pricePerDay": 18
+        },
+        "10-15": {
+          "pricePerDay": 17
+        },
+        "16-21": {
+          "pricePerDay": 16
+        },
+        "22-30": {
+          "pricePerDay": 15
+        },
+        "31+": {
+          "pricePerDay": 13
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 200,
+      "perDay": 3
+    },
+    "reducedGuarantee2": {
+      "deposit": 80,
+      "perDay": 10
+    }
+  },
+  {
+    "id": "trt-fiesta",
+    "slug": "ford-fiesta",
+    "name": "Ford Fiesta",
+    "category": "economy",
+    "categoryLabel": "Economic",
+    "pricePerDay": 32,
+    "price3Days": 96,
+    "guarantee": 300,
+    "year": 2021,
+    "engine": "1.1",
+    "fuel": "Benzină",
+    "transmission": "Manuală",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 5,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth"
+    ],
+    "image": "/images/cars/image-06.jpeg",
+    "gallery": [
+      "/images/cars/image-07.jpeg",
+      "/images/cars/image-08.jpeg",
+      "/images/cars/image-11-interior.jpeg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 32
+      },
+      "4-9": {
+        "pricePerDay": 26
+      },
+      "10-15": {
+        "pricePerDay": 25
+      },
+      "16-21": {
+        "pricePerDay": 24
+      },
+      "22-30": {
+        "pricePerDay": 23
+      },
+      "31+": {
+        "pricePerDay": 21
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 32
+        },
+        "4-9": {
+          "pricePerDay": 26
+        },
+        "10-15": {
+          "pricePerDay": 25
+        },
+        "16-21": {
+          "pricePerDay": 24
+        },
+        "22-30": {
+          "pricePerDay": 23
+        },
+        "31+": {
+          "pricePerDay": 21
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 31
+        },
+        "4-9": {
+          "pricePerDay": 28
+        },
+        "10-15": {
+          "pricePerDay": 26
+        },
+        "16-21": {
+          "pricePerDay": 25
+        },
+        "22-30": {
+          "pricePerDay": 22
+        },
+        "31+": {
+          "pricePerDay": 21
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 27
+        },
+        "4-9": {
+          "pricePerDay": 20
+        },
+        "10-15": {
+          "pricePerDay": 19
+        },
+        "16-21": {
+          "pricePerDay": 18
+        },
+        "22-30": {
+          "pricePerDay": 17
+        },
+        "31+": {
+          "pricePerDay": 15
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 200,
+      "perDay": 3
+    },
+    "reducedGuarantee2": {
+      "deposit": 80,
+      "perDay": 10
+    }
+  },
+  {
+    "id": "trt-toledo",
+    "slug": "seat-toledo-automat",
+    "name": "Seat Toledo Automat",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 34,
+    "price3Days": 102,
+    "guarantee": 300,
+    "year": 2019,
+    "engine": "1.0 TSI",
+    "fuel": "Benzină",
+    "transmission": "Automată",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 4,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth"
+    ],
+    "image": "/images/cars/seat-toledo-automat-01.jpg",
+    "gallery": [
+      "/images/cars/seat-toledo-automat-02.jpg",
+      "/images/cars/seat-toledo-automat-03.jpg",
+      "/images/cars/seat-toledo-automat-05.jpg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 34
+      },
+      "4-9": {
+        "pricePerDay": 28
+      },
+      "10-15": {
+        "pricePerDay": 27
+      },
+      "16-21": {
+        "pricePerDay": 26
+      },
+      "22-30": {
+        "pricePerDay": 25
+      },
+      "31+": {
+        "pricePerDay": 22
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 34
+        },
+        "4-9": {
+          "pricePerDay": 28
+        },
+        "10-15": {
+          "pricePerDay": 27
+        },
+        "16-21": {
+          "pricePerDay": 26
+        },
+        "22-30": {
+          "pricePerDay": 25
+        },
+        "31+": {
+          "pricePerDay": 22
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 37
+        },
+        "4-9": {
+          "pricePerDay": 33
+        },
+        "10-15": {
+          "pricePerDay": 30
+        },
+        "16-21": {
+          "pricePerDay": 29
+        },
+        "22-30": {
+          "pricePerDay": 27
+        },
+        "31+": {
+          "pricePerDay": 26
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 32
+        },
+        "4-9": {
+          "pricePerDay": 24
+        },
+        "10-15": {
+          "pricePerDay": 21
+        },
+        "16-21": {
+          "pricePerDay": 20
+        },
+        "22-30": {
+          "pricePerDay": 17
+        },
+        "31+": {
+          "pricePerDay": 14
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 200,
+      "perDay": 3
+    },
+    "reducedGuarantee2": {
+      "deposit": 80,
+      "perDay": 10
+    }
+  },
+  {
+    "id": "trt-rapid",
+    "slug": "skoda-rapid",
+    "name": "Skoda Rapid",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 17,
+    "price3Days": 51,
+    "guarantee": 250,
+    "scdwPerDay": 14,
+    "year": 2020,
+    "engine": "1.0 TSI",
+    "fuel": "Benzină",
+    "transmission": "Manuală",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 4,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth"
+    ],
+    "image": "/images/cars/rapid-argintiu-01.jpg",
+    "gallery": [],
+    "featured": false,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 17,
+        "scdwPerDay": 14
+      },
+      "4-9": {
+        "pricePerDay": 17,
+        "scdwPerDay": 12
+      },
+      "10-15": {
+        "pricePerDay": 16,
+        "scdwPerDay": 10
+      },
+      "16-21": {
+        "pricePerDay": 15,
+        "scdwPerDay": 8
+      },
+      "22-30": {
+        "pricePerDay": 15,
+        "scdwPerDay": 8
+      },
+      "31+": {
+        "pricePerDay": 14,
+        "scdwPerDay": 6
+      }
+    }
+  },
+  {
+    "id": "trt-rapid-automat",
+    "slug": "skoda-rapid-automat",
+    "name": "Skoda Rapid Automat",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 18,
+    "price3Days": 54,
+    "guarantee": 250,
+    "scdwPerDay": 14,
+    "year": 2019,
+    "engine": "1.0 TSI",
+    "fuel": "Benzină",
+    "transmission": "Automată",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 4,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth"
+    ],
+    "image": "/images/cars/rapid-albastru-01.jpg",
+    "gallery": [],
+    "featured": false,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 18,
+        "scdwPerDay": 14
+      },
+      "4-9": {
+        "pricePerDay": 18,
+        "scdwPerDay": 12
+      },
+      "10-15": {
+        "pricePerDay": 17,
+        "scdwPerDay": 10
+      },
+      "16-21": {
+        "pricePerDay": 16,
+        "scdwPerDay": 8
+      },
+      "22-30": {
+        "pricePerDay": 16,
+        "scdwPerDay": 8
+      },
+      "31+": {
+        "pricePerDay": 15,
+        "scdwPerDay": 6
+      }
+    }
+  },
+  {
+    "id": "trt-astra",
+    "slug": "opel-astra-j-automat",
+    "name": "Opel Astra J Automat",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 18,
+    "price3Days": 54,
+    "guarantee": 300,
+    "scdwPerDay": 15,
+    "year": 2018,
+    "engine": "1.4",
+    "fuel": "Benzină",
+    "transmission": "Automată",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 5,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth"
+    ],
+    "image": "/images/cars/opel-astra-automat-01.jpg",
+    "gallery": [
+      "/images/cars/opel-astra-automat-02.jpg",
+      "/images/cars/opel-astra-automat-03.jpg",
+      "/images/cars/opel-astra-automat-04.jpg",
+      "/images/cars/opel-astra-automat-05.jpg"
+    ],
+    "featured": false,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 18,
+        "scdwPerDay": 15
+      },
+      "4-9": {
+        "pricePerDay": 18,
+        "scdwPerDay": 12
+      },
+      "10-15": {
+        "pricePerDay": 17,
+        "scdwPerDay": 10
+      },
+      "16-21": {
+        "pricePerDay": 16,
+        "scdwPerDay": 8
+      },
+      "22-30": {
+        "pricePerDay": 16,
+        "scdwPerDay": 8
+      },
+      "31+": {
+        "pricePerDay": 15,
+        "scdwPerDay": 6
+      }
+    }
+  },
+  {
+    "id": "trt-megane-2",
+    "slug": "renault-megane-2",
+    "name": "Renault Megane",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 34,
+    "price3Days": 102,
+    "guarantee": 300,
+    "engine": "1.3 TCe",
+    "fuel": "Benzină",
+    "transmission": "Manuală",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 5,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth"
+    ],
+    "image": "/images/cars/01.png",
+    "gallery": [
+      "/images/cars/02.png",
+      "/images/cars/03.png",
+      "/images/cars/04.png",
+      "/images/cars/05.png"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 34
+      },
+      "4-9": {
+        "pricePerDay": 28
+      },
+      "10-15": {
+        "pricePerDay": 27
+      },
+      "16-21": {
+        "pricePerDay": 26
+      },
+      "22-30": {
+        "pricePerDay": 25
+      },
+      "31+": {
+        "pricePerDay": 22
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 34
+        },
+        "4-9": {
+          "pricePerDay": 28
+        },
+        "10-15": {
+          "pricePerDay": 27
+        },
+        "16-21": {
+          "pricePerDay": 26
+        },
+        "22-30": {
+          "pricePerDay": 25
+        },
+        "31+": {
+          "pricePerDay": 22
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 37
+        },
+        "4-9": {
+          "pricePerDay": 34
+        },
+        "10-15": {
+          "pricePerDay": 31
+        },
+        "16-21": {
+          "pricePerDay": 30
+        },
+        "22-30": {
+          "pricePerDay": 28
+        },
+        "31+": {
+          "pricePerDay": 27
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 32
+        },
+        "4-9": {
+          "pricePerDay": 24
+        },
+        "10-15": {
+          "pricePerDay": 21
+        },
+        "16-21": {
+          "pricePerDay": 20
+        },
+        "22-30": {
+          "pricePerDay": 17
+        },
+        "31+": {
+          "pricePerDay": 14
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 200,
+      "perDay": 3
+    },
+    "reducedGuarantee2": {
+      "deposit": 80,
+      "perDay": 10
+    }
+  },
+  {
+    "id": "trt-arona",
+    "slug": "seat-arona",
+    "name": "Seat Arona",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 37,
+    "price3Days": 111,
+    "guarantee": 400,
+    "year": 2021,
+    "engine": "1.0 TSI",
+    "fuel": "Benzină",
+    "transmission": "Manuală",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 5,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth"
+    ],
+    "image": "/images/cars/seat-arona-1794474289366-5gf3y34.jpg",
+    "gallery": [
+      "/images/cars/seat-arona-1794474289405-i1wx9vv.jpg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 37
+      },
+      "4-9": {
+        "pricePerDay": 30
+      },
+      "10-15": {
+        "pricePerDay": 29
+      },
+      "16-21": {
+        "pricePerDay": 28
+      },
+      "22-30": {
+        "pricePerDay": 27
+      },
+      "31+": {
+        "pricePerDay": 24
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 37
+        },
+        "4-9": {
+          "pricePerDay": 30
+        },
+        "10-15": {
+          "pricePerDay": 29
+        },
+        "16-21": {
+          "pricePerDay": 28
+        },
+        "22-30": {
+          "pricePerDay": 27
+        },
+        "31+": {
+          "pricePerDay": 24
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 40
+        },
+        "4-9": {
+          "pricePerDay": 37
+        },
+        "10-15": {
+          "pricePerDay": 33
+        },
+        "16-21": {
+          "pricePerDay": 32
+        },
+        "22-30": {
+          "pricePerDay": 31
+        },
+        "31+": {
+          "pricePerDay": 30
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 34
+        },
+        "4-9": {
+          "pricePerDay": 26
+        },
+        "10-15": {
+          "pricePerDay": 23
+        },
+        "16-21": {
+          "pricePerDay": 22
+        },
+        "22-30": {
+          "pricePerDay": 19
+        },
+        "31+": {
+          "pricePerDay": 16
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 200,
+      "perDay": 5
+    },
+    "reducedGuarantee2": {
+      "deposit": 100,
+      "perDay": 10
+    }
+  },
+  {
+    "id": "trt-arona-automat",
+    "slug": "seat-arona-automat",
+    "name": "Seat Arona Automat",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 39,
+    "price3Days": 117,
+    "guarantee": 400,
+    "year": 2021,
+    "engine": "1.0 TSI",
+    "fuel": "Benzină",
+    "transmission": "Automată",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 5,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth"
+    ],
+    "image": "/images/cars/seat-arona-automat-1794474308254-6rfhp2o.jpeg",
+    "gallery": [
+      "/images/cars/seat-arona-automat-1794474308424-uczhdpv.jpeg",
+      "/images/cars/seat-arona-automat-1794474308638-yggskuw.jpeg",
+      "/images/cars/seat-arona-automat-1794474308354-ay506p4.jpeg",
+      "/images/cars/seat-arona-automat-1794474308575-wkk199h.jpeg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 39
+      },
+      "4-9": {
+        "pricePerDay": 32
+      },
+      "10-15": {
+        "pricePerDay": 31
+      },
+      "16-21": {
+        "pricePerDay": 30
+      },
+      "22-30": {
+        "pricePerDay": 29
+      },
+      "31+": {
+        "pricePerDay": 25
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 39
+        },
+        "4-9": {
+          "pricePerDay": 32
+        },
+        "10-15": {
+          "pricePerDay": 31
+        },
+        "16-21": {
+          "pricePerDay": 30
+        },
+        "22-30": {
+          "pricePerDay": 29
+        },
+        "31+": {
+          "pricePerDay": 25
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 42
+        },
+        "4-9": {
+          "pricePerDay": 39
+        },
+        "10-15": {
+          "pricePerDay": 35
+        },
+        "16-21": {
+          "pricePerDay": 34
+        },
+        "22-30": {
+          "pricePerDay": 33
+        },
+        "31+": {
+          "pricePerDay": 32
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 35
+        },
+        "4-9": {
+          "pricePerDay": 28
+        },
+        "10-15": {
+          "pricePerDay": 25
+        },
+        "16-21": {
+          "pricePerDay": 24
+        },
+        "22-30": {
+          "pricePerDay": 21
+        },
+        "31+": {
+          "pricePerDay": 18
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 200,
+      "perDay": 5
+    },
+    "reducedGuarantee2": {
+      "deposit": 100,
+      "perDay": 10
+    }
+  },
+  {
+    "id": "trt-elantra",
+    "slug": "hyundai-elantra",
+    "name": "Hyundai Elantra",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 45,
+    "price3Days": 135,
+    "guarantee": 400,
+    "year": 2021,
+    "engine": "1.6",
+    "fuel": "Benzină",
+    "transmission": "Manuală",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 4,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth",
+      "CarPlay"
+    ],
+    "image": "/images/cars/elantra-01.jpg",
+    "gallery": [
+      "/images/cars/elantra-05.jpg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 45
+      },
+      "4-9": {
+        "pricePerDay": 38
+      },
+      "10-15": {
+        "pricePerDay": 37
+      },
+      "16-21": {
+        "pricePerDay": 36
+      },
+      "22-30": {
+        "pricePerDay": 35
+      },
+      "31+": {
+        "pricePerDay": 28
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 45
+        },
+        "4-9": {
+          "pricePerDay": 38
+        },
+        "10-15": {
+          "pricePerDay": 37
+        },
+        "16-21": {
+          "pricePerDay": 36
+        },
+        "22-30": {
+          "pricePerDay": 35
+        },
+        "31+": {
+          "pricePerDay": 28
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 48
+        },
+        "4-9": {
+          "pricePerDay": 45
+        },
+        "10-15": {
+          "pricePerDay": 42
+        },
+        "16-21": {
+          "pricePerDay": 40
+        },
+        "22-30": {
+          "pricePerDay": 39
+        },
+        "31+": {
+          "pricePerDay": 36
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 37
+        },
+        "4-9": {
+          "pricePerDay": 30
+        },
+        "10-15": {
+          "pricePerDay": 27
+        },
+        "16-21": {
+          "pricePerDay": 26
+        },
+        "22-30": {
+          "pricePerDay": 24
+        },
+        "31+": {
+          "pricePerDay": 23
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 200,
+      "perDay": 5
+    },
+    "reducedGuarantee2": {
+      "deposit": 100,
+      "perDay": 10
+    }
+  },
+  {
+    "id": "trt-elantra-automat",
+    "slug": "hyundai-elantra-automat",
+    "name": "Hyundai Elantra Automat",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 47,
+    "price3Days": 141,
+    "guarantee": 400,
+    "year": 2020,
+    "engine": "1.6",
+    "fuel": "Benzină",
+    "transmission": "Automată",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 4,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth",
+      "CarPlay"
+    ],
+    "image": "/images/cars/hyundai-elantra-automat-1794473856247-0gavrl0.jpg",
+    "gallery": [
+      "/images/cars/hyundai-elantra-automat-1794473856302-tgtlhd8.jpg",
+      "/images/cars/hyundai-elantra-automat-1794473856338-ex9428x.jpg",
+      "/images/cars/hyundai-elantra-automat-1794473856370-bbl25u9.jpg",
+      "/images/cars/hyundai-elantra-automat-1794473856406-49cfs0m.jpg",
+      "/images/cars/hyundai-elantra-automat-1794473856457-59scp9u.jpg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 47
+      },
+      "4-9": {
+        "pricePerDay": 40
+      },
+      "10-15": {
+        "pricePerDay": 39
+      },
+      "16-21": {
+        "pricePerDay": 38
+      },
+      "22-30": {
+        "pricePerDay": 37
+      },
+      "31+": {
+        "pricePerDay": 30
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 47
+        },
+        "4-9": {
+          "pricePerDay": 40
+        },
+        "10-15": {
+          "pricePerDay": 39
+        },
+        "16-21": {
+          "pricePerDay": 38
+        },
+        "22-30": {
+          "pricePerDay": 37
+        },
+        "31+": {
+          "pricePerDay": 30
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 50
+        },
+        "4-9": {
+          "pricePerDay": 47
+        },
+        "10-15": {
+          "pricePerDay": 44
+        },
+        "16-21": {
+          "pricePerDay": 42
+        },
+        "22-30": {
+          "pricePerDay": 41
+        },
+        "31+": {
+          "pricePerDay": 38
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 39
+        },
+        "4-9": {
+          "pricePerDay": 32
+        },
+        "10-15": {
+          "pricePerDay": 29
+        },
+        "16-21": {
+          "pricePerDay": 28
+        },
+        "22-30": {
+          "pricePerDay": 24
+        },
+        "31+": {
+          "pricePerDay": 23
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 200,
+      "perDay": 5
+    },
+    "reducedGuarantee2": {
+      "deposit": 100,
+      "perDay": 10
+    }
+  },
+  {
+    "id": "trt-puma",
+    "slug": "ford-puma-automat",
+    "name": "Ford Puma Automat",
+    "category": "business",
+    "categoryLabel": "Medium",
+    "pricePerDay": 42,
+    "price3Days": 126,
+    "guarantee": 400,
+    "year": 2022,
+    "engine": "1.0 EcoBoost",
+    "fuel": "Benzină",
+    "transmission": "Automată",
+    "traction": "fata",
+    "seats": 5,
+    "doors": 5,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth",
+      "CarPlay"
+    ],
+    "image": "/images/cars/puma-01.jpg",
+    "gallery": [
+      "/images/cars/puma-05.jpg",
+      "/images/cars/11.jpg",
+      "/images/cars/12.jpg",
+      "/images/cars/13.jpg",
+      "/images/cars/14.jpg",
+      "/images/cars/15.jpg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 42
+      },
+      "4-9": {
+        "pricePerDay": 34
+      },
+      "10-15": {
+        "pricePerDay": 33
+      },
+      "16-21": {
+        "pricePerDay": 32
+      },
+      "22-30": {
+        "pricePerDay": 31
+      },
+      "31+": {
+        "pricePerDay": 27
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 42
+        },
+        "4-9": {
+          "pricePerDay": 34
+        },
+        "10-15": {
+          "pricePerDay": 33
+        },
+        "16-21": {
+          "pricePerDay": 32
+        },
+        "22-30": {
+          "pricePerDay": 31
+        },
+        "31+": {
+          "pricePerDay": 27
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 44
+        },
+        "4-9": {
+          "pricePerDay": 41
+        },
+        "10-15": {
+          "pricePerDay": 37
+        },
+        "16-21": {
+          "pricePerDay": 36
+        },
+        "22-30": {
+          "pricePerDay": 35
+        },
+        "31+": {
+          "pricePerDay": 34
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 37
+        },
+        "4-9": {
+          "pricePerDay": 30
+        },
+        "10-15": {
+          "pricePerDay": 27
+        },
+        "16-21": {
+          "pricePerDay": 26
+        },
+        "22-30": {
+          "pricePerDay": 25
+        },
+        "31+": {
+          "pricePerDay": 25
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 200,
+      "perDay": 5
+    },
+    "reducedGuarantee2": {
+      "deposit": 100,
+      "perDay": 12
+    }
+  },
+  {
+    "id": "trt-kuga",
+    "slug": "ford-kuga-automat",
+    "name": "Ford Kuga Automat",
+    "category": "premium",
+    "categoryLabel": "SUV",
+    "pricePerDay": 60,
+    "price3Days": 180,
+    "guarantee": 500,
+    "year": 2023,
+    "engine": "1.5 EcoBoost",
+    "fuel": "Benzină",
+    "transmission": "Automată",
+    "traction": "4x4",
+    "seats": 5,
+    "doors": 5,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth",
+      "CarPlay",
+      "4x4"
+    ],
+    "image": "/images/cars/22.jpg",
+    "gallery": [
+      "/images/cars/kuga-05.jpg",
+      "/images/cars/21.jpg",
+      "/images/cars/23.jpg",
+      "/images/cars/24.jpg",
+      "/images/cars/25.jpg",
+      "/images/cars/kuga-01.jpg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 60
+      },
+      "4-9": {
+        "pricePerDay": 55
+      },
+      "10-15": {
+        "pricePerDay": 53
+      },
+      "16-21": {
+        "pricePerDay": 51
+      },
+      "22-30": {
+        "pricePerDay": 49
+      },
+      "31+": {
+        "pricePerDay": 44
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 60
+        },
+        "4-9": {
+          "pricePerDay": 55
+        },
+        "10-15": {
+          "pricePerDay": 53
+        },
+        "16-21": {
+          "pricePerDay": 51
+        },
+        "22-30": {
+          "pricePerDay": 49
+        },
+        "31+": {
+          "pricePerDay": 44
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 66
+        },
+        "4-9": {
+          "pricePerDay": 60
+        },
+        "10-15": {
+          "pricePerDay": 58
+        },
+        "16-21": {
+          "pricePerDay": 56
+        },
+        "22-30": {
+          "pricePerDay": 53
+        },
+        "31+": {
+          "pricePerDay": 48
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 50
+        },
+        "4-9": {
+          "pricePerDay": 47
+        },
+        "10-15": {
+          "pricePerDay": 45
+        },
+        "16-21": {
+          "pricePerDay": 44
+        },
+        "22-30": {
+          "pricePerDay": 42
+        },
+        "31+": {
+          "pricePerDay": 40
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 250,
+      "perDay": 6
+    },
+    "reducedGuarantee2": {
+      "deposit": 100,
+      "perDay": 15
+    }
+  },
+  {
+    "id": "trt-x1",
+    "slug": "bmw-x1-automat",
+    "name": "BMW X1 Automat",
+    "category": "premium",
+    "categoryLabel": "SUV",
+    "pricePerDay": 55,
+    "price3Days": 165,
+    "guarantee": 700,
+    "scdwPerDay": 35,
+    "year": 2021,
+    "engine": "2.0d",
+    "fuel": "Motorină",
+    "transmission": "Automată",
+    "traction": "4x4",
+    "seats": 5,
+    "doors": 5,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth",
+      "CarPlay",
+      "4x4"
+    ],
+    "image": "/images/cars/1.jpg",
+    "gallery": [
+      "/images/cars/2.jpg",
+      "/images/cars/3.jpg",
+      "/images/cars/4.jpg",
+      "/images/cars/5.jpg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 55,
+        "scdwPerDay": 35
+      },
+      "4-9": {
+        "pricePerDay": 55,
+        "scdwPerDay": 28
+      },
+      "10-15": {
+        "pricePerDay": 52,
+        "scdwPerDay": 22
+      },
+      "16-21": {
+        "pricePerDay": 49,
+        "scdwPerDay": 16
+      },
+      "22-30": {
+        "pricePerDay": 49,
+        "scdwPerDay": 16
+      },
+      "31+": {
+        "pricePerDay": 45,
+        "scdwPerDay": 12
+      }
+    }
+  },
+  {
+    "id": "trt-vito-9",
+    "slug": "mercedes-benz-vito-9-locuri",
+    "name": "Mercedes-Benz Vito 9 Locuri",
+    "category": "vans",
+    "categoryLabel": "Microbuz",
+    "pricePerDay": 70,
+    "price3Days": 210,
+    "guarantee": 600,
+    "scdwPerDay": 30,
+    "year": 2019,
+    "engine": "2.0 CDI",
+    "fuel": "Diesel",
+    "transmission": "Manuală",
+    "traction": "spate",
+    "seats": 9,
+    "doors": 4,
+    "features": [
+      "Aer condiționat",
+      "Bluetooth",
+      "9 locuri",
+      "USB"
+    ],
+    "image": "/images/cars/vito-1.jpeg",
+    "gallery": [
+      "/images/cars/vito-2.jpeg",
+      "/images/cars/vito-3.jpeg",
+      "/images/cars/vito-5.jpeg"
+    ],
+    "featured": true,
+    "pricingByInterval": {
+      "1-3": {
+        "pricePerDay": 70,
+        "scdwPerDay": 30
+      },
+      "4-9": {
+        "pricePerDay": 65,
+        "scdwPerDay": 25
+      },
+      "10-15": {
+        "pricePerDay": 62,
+        "scdwPerDay": 22
+      },
+      "16-21": {
+        "pricePerDay": 60,
+        "scdwPerDay": 18
+      },
+      "22-30": {
+        "pricePerDay": 58,
+        "scdwPerDay": 18
+      },
+      "31+": {
+        "pricePerDay": 52,
+        "scdwPerDay": 15
+      }
+    },
+    "pricingBySeason": {
+      "normal": {
+        "1-3": {
+          "pricePerDay": 70
+        },
+        "4-9": {
+          "pricePerDay": 65
+        },
+        "10-15": {
+          "pricePerDay": 62
+        },
+        "16-21": {
+          "pricePerDay": 60
+        },
+        "22-30": {
+          "pricePerDay": 58
+        },
+        "31+": {
+          "pricePerDay": 52
+        }
+      },
+      "full": {
+        "1-3": {
+          "pricePerDay": 77
+        },
+        "4-9": {
+          "pricePerDay": 72
+        },
+        "10-15": {
+          "pricePerDay": 68
+        },
+        "16-21": {
+          "pricePerDay": 66
+        },
+        "22-30": {
+          "pricePerDay": 64
+        },
+        "31+": {
+          "pricePerDay": 57
+        }
+      },
+      "extra": {
+        "1-3": {
+          "pricePerDay": 58
+        },
+        "4-9": {
+          "pricePerDay": 55
+        },
+        "10-15": {
+          "pricePerDay": 52
+        },
+        "16-21": {
+          "pricePerDay": 50
+        },
+        "22-30": {
+          "pricePerDay": 48
+        },
+        "31+": {
+          "pricePerDay": 45
+        }
+      }
+    },
+    "reducedGuarantee": {
+      "deposit": 300,
+      "perDay": 8
+    },
+    "reducedGuarantee2": {
+      "deposit": 150,
+      "perDay": 18
+    }
+  }
+]
