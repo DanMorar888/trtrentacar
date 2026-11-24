@@ -94,7 +94,7 @@ export const ro = {
       },
       {
         q: "3. Care este vârsta minimă pentru a închiria o mașină?",
-        a: "Vârsta minimă pentru a închiria o mașină la TRT Rent a Car este de 21 de ani, iar șoferul trebuie să dețină un permis de conducere valabil de cel puțin un an. Pentru anumite categorii de vehicule, vârsta minimă poate fi mai mare.",
+        a: "Vârsta minimă pentru a închiria o mașină la TRT Rent a Car este de 21 de ani, iar șoferul trebuie să dețină un permis de conducere valabil de cel puțin un an.",
       },
       {
         q: "4. Ce este inclus în prețul de închiriere?",
@@ -500,7 +500,7 @@ export const en: Messages = {
       },
       {
         q: "3. What is the minimum age to rent a car?",
-        a: "The minimum age to rent a car at TRT Rent a Car is 21, and the driver must have held a valid driving licence for at least one year. For certain categories of vehicles, the minimum age may be higher.",
+        a: "The minimum age to rent a car at TRT Rent a Car is 21, and the driver must have held a valid driving licence for at least one year.",
       },
       {
         q: "4. What is included in the rental price?",
