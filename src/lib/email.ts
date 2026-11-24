@@ -103,7 +103,7 @@ export async function sendAdminStatusChange(reservation: Reservation): Promise<b
   if (!resend) return false;
   const statusLabel = reservation.status === "confirmed" ? "confirmată" : "anulată";
   const html = `
-    <p>Rezervarea #${reservation.id} a fost ${statusLabel}.</p>
+    <p>Rezervarea ${reservation.reference || `#${reservation.id}`} a fost ${statusLabel}.</p>
     <p><strong>Client:</strong> ${reservation.name} (${reservation.email})</p>
     <p><strong>Mașină:</strong> ${reservation.carName}, ${formatDisplayDate(reservation.pickupDate)} – ${formatDisplayDate(reservation.returnDate)}</p>
   `;
