@@ -19,12 +19,12 @@
       "Aer condiționat",
       "Bluetooth"
     ],
-    "image": "/images/cars/renault-clio-01.jpg",
+    "image": "/images/cars/renault-clio-1.jpg",
     "gallery": [
-      "/images/cars/renault-clio-02.jpg",
-      "/images/cars/renault-clio-03.jpg",
-      "/images/cars/renault-clio-04.jpg",
-      "/images/cars/renault-clio-05.jpg"
+      "/images/cars/renault-clio-2.jpg",
+      "/images/cars/renault-clio-3.jpg",
+      "/images/cars/renault-clio-4.jpg",
+      "/images/cars/renault-clio-5.jpg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -138,11 +138,11 @@
       "Aer condiționat",
       "Bluetooth"
     ],
-    "image": "/images/cars/image-06.jpeg",
+    "image": "/images/cars/ford-fiesta-1.jpeg",
     "gallery": [
-      "/images/cars/image-07.jpeg",
-      "/images/cars/image-08.jpeg",
-      "/images/cars/image-11-interior.jpeg"
+      "/images/cars/ford-fiesta-2.jpeg",
+      "/images/cars/ford-fiesta-3.jpeg",
+      "/images/cars/ford-fiesta-4.jpeg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -256,11 +256,11 @@
       "Aer condiționat",
       "Bluetooth"
     ],
-    "image": "/images/cars/seat-toledo-automat-01.jpg",
+    "image": "/images/cars/seat-toledo-automat-1.jpg",
     "gallery": [
-      "/images/cars/seat-toledo-automat-02.jpg",
-      "/images/cars/seat-toledo-automat-03.jpg",
-      "/images/cars/seat-toledo-automat-05.jpg"
+      "/images/cars/seat-toledo-automat-2.jpg",
+      "/images/cars/seat-toledo-automat-3.jpg",
+      "/images/cars/seat-toledo-automat-4.jpg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -375,7 +375,7 @@
       "Aer condiționat",
       "Bluetooth"
     ],
-    "image": "/images/cars/rapid-argintiu-01.jpg",
+    "image": "/images/cars/skoda-rapid-1.jpg",
     "gallery": [],
     "featured": false,
     "pricingByInterval": {
@@ -426,7 +426,7 @@
       "Aer condiționat",
       "Bluetooth"
     ],
-    "image": "/images/cars/rapid-albastru-01.jpg",
+    "image": "/images/cars/skoda-rapid-automat-1.jpg",
     "gallery": [],
     "featured": false,
     "pricingByInterval": {
@@ -477,12 +477,12 @@
       "Aer condiționat",
       "Bluetooth"
     ],
-    "image": "/images/cars/opel-astra-automat-01.jpg",
+    "image": "/images/cars/opel-astra-j-automat-1.jpg",
     "gallery": [
-      "/images/cars/opel-astra-automat-02.jpg",
-      "/images/cars/opel-astra-automat-03.jpg",
-      "/images/cars/opel-astra-automat-04.jpg",
-      "/images/cars/opel-astra-automat-05.jpg"
+      "/images/cars/opel-astra-j-automat-2.jpg",
+      "/images/cars/opel-astra-j-automat-3.jpg",
+      "/images/cars/opel-astra-j-automat-4.jpg",
+      "/images/cars/opel-astra-j-automat-5.jpg"
     ],
     "featured": false,
     "pricingByInterval": {
@@ -531,12 +531,12 @@
       "Aer condiționat",
       "Bluetooth"
     ],
-    "image": "/images/cars/01.png",
+    "image": "/images/cars/renault-megane-1.png",
     "gallery": [
-      "/images/cars/02.png",
-      "/images/cars/03.png",
-      "/images/cars/04.png",
-      "/images/cars/05.png"
+      "/images/cars/renault-megane-2.png",
+      "/images/cars/renault-megane-3.png",
+      "/images/cars/renault-megane-4.png",
+      "/images/cars/renault-megane-5.png"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -650,9 +650,9 @@
       "Aer condiționat",
       "Bluetooth"
     ],
-    "image": "/images/cars/seat-arona-1794474289366-5gf3y34.jpg",
+    "image": "/images/cars/seat-arona-1.jpg",
     "gallery": [
-      "/images/cars/seat-arona-1794474289405-i1wx9vv.jpg"
+      "/images/cars/seat-arona-2.jpg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -766,12 +766,12 @@
       "Aer condiționat",
       "Bluetooth"
     ],
-    "image": "/images/cars/seat-arona-automat-1794474308254-6rfhp2o.jpeg",
+    "image": "/images/cars/seat-arona-automat-1.jpeg",
     "gallery": [
-      "/images/cars/seat-arona-automat-1794474308424-uczhdpv.jpeg",
-      "/images/cars/seat-arona-automat-1794474308638-yggskuw.jpeg",
-      "/images/cars/seat-arona-automat-1794474308354-ay506p4.jpeg",
-      "/images/cars/seat-arona-automat-1794474308575-wkk199h.jpeg"
+      "/images/cars/seat-arona-automat-2.jpeg",
+      "/images/cars/seat-arona-automat-3.jpeg",
+      "/images/cars/seat-arona-automat-4.jpeg",
+      "/images/cars/seat-arona-automat-5.jpeg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -886,9 +886,9 @@
       "Bluetooth",
       "CarPlay"
     ],
-    "image": "/images/cars/elantra-01.jpg",
+    "image": "/images/cars/hyundai-elantra-1.jpg",
     "gallery": [
-      "/images/cars/elantra-05.jpg"
+      "/images/cars/hyundai-elantra-2.jpg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -1003,13 +1003,13 @@
       "Bluetooth",
       "CarPlay"
     ],
-    "image": "/images/cars/hyundai-elantra-automat-1794473856247-0gavrl0.jpg",
+    "image": "/images/cars/hyundai-elantra-automat-1.jpg",
     "gallery": [
-      "/images/cars/hyundai-elantra-automat-1794473856302-tgtlhd8.jpg",
-      "/images/cars/hyundai-elantra-automat-1794473856338-ex9428x.jpg",
-      "/images/cars/hyundai-elantra-automat-1794473856370-bbl25u9.jpg",
-      "/images/cars/hyundai-elantra-automat-1794473856406-49cfs0m.jpg",
-      "/images/cars/hyundai-elantra-automat-1794473856457-59scp9u.jpg"
+      "/images/cars/hyundai-elantra-automat-2.jpg",
+      "/images/cars/hyundai-elantra-automat-3.jpg",
+      "/images/cars/hyundai-elantra-automat-4.jpg",
+      "/images/cars/hyundai-elantra-automat-5.jpg",
+      "/images/cars/hyundai-elantra-automat-6.jpg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -1124,14 +1124,14 @@
       "Bluetooth",
       "CarPlay"
     ],
-    "image": "/images/cars/puma-01.jpg",
+    "image": "/images/cars/ford-puma-automat-1.jpg",
     "gallery": [
-      "/images/cars/puma-05.jpg",
-      "/images/cars/11.jpg",
-      "/images/cars/12.jpg",
-      "/images/cars/13.jpg",
-      "/images/cars/14.jpg",
-      "/images/cars/15.jpg"
+      "/images/cars/ford-puma-automat-2.jpg",
+      "/images/cars/ford-puma-automat-3.jpg",
+      "/images/cars/ford-puma-automat-4.jpg",
+      "/images/cars/ford-puma-automat-5.jpg",
+      "/images/cars/ford-puma-automat-6.jpg",
+      "/images/cars/ford-puma-automat-7.jpg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -1247,14 +1247,14 @@
       "CarPlay",
       "4x4"
     ],
-    "image": "/images/cars/22.jpg",
+    "image": "/images/cars/ford-kuga-automat-1.jpg",
     "gallery": [
-      "/images/cars/kuga-05.jpg",
-      "/images/cars/21.jpg",
-      "/images/cars/23.jpg",
-      "/images/cars/24.jpg",
-      "/images/cars/25.jpg",
-      "/images/cars/kuga-01.jpg"
+      "/images/cars/ford-kuga-automat-2.jpg",
+      "/images/cars/ford-kuga-automat-3.jpg",
+      "/images/cars/ford-kuga-automat-4.jpg",
+      "/images/cars/ford-kuga-automat-5.jpg",
+      "/images/cars/ford-kuga-automat-6.jpg",
+      "/images/cars/ford-kuga-automat-7.jpg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -1371,12 +1371,12 @@
       "CarPlay",
       "4x4"
     ],
-    "image": "/images/cars/1.jpg",
+    "image": "/images/cars/bmw-x1-automat-1.jpg",
     "gallery": [
-      "/images/cars/2.jpg",
-      "/images/cars/3.jpg",
-      "/images/cars/4.jpg",
-      "/images/cars/5.jpg"
+      "/images/cars/bmw-x1-automat-2.jpg",
+      "/images/cars/bmw-x1-automat-3.jpg",
+      "/images/cars/bmw-x1-automat-4.jpg",
+      "/images/cars/bmw-x1-automat-5.jpg"
     ],
     "featured": true,
     "pricingByInterval": {
@@ -1429,11 +1429,11 @@
       "9 locuri",
       "USB"
     ],
-    "image": "/images/cars/vito-1.jpeg",
+    "image": "/images/cars/mercedes-benz-vito-9-locuri-1.jpeg",
     "gallery": [
-      "/images/cars/vito-2.jpeg",
-      "/images/cars/vito-3.jpeg",
-      "/images/cars/vito-5.jpeg"
+      "/images/cars/mercedes-benz-vito-9-locuri-2.jpeg",
+      "/images/cars/mercedes-benz-vito-9-locuri-3.jpeg",
+      "/images/cars/mercedes-benz-vito-9-locuri-4.jpeg"
     ],
     "featured": true,
     "pricingByInterval": {

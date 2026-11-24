@@ -74,7 +74,7 @@ export function CarForm({ car, isNew }: CarFormProps) {
     if (!files?.length) return;
     setError("");
     setUploading(true);
-    const slug = form.slug || "car";
+    const slug = form.name || form.slug || "car";
     const newUrls: string[] = [];
     try {
       for (let i = 0; i < files.length; i++) {

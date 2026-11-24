@@ -15,7 +15,7 @@ export const articles: Article[] = [
     id: "1",
     slug: "de-ce-sa-alegi-masina-4x4-iarna-cluj",
     date: "2026-01-08",
-    image: "/images/cars/kuga-01.jpg",
+    image: "/images/cars/ford-kuga-automat-7.jpg",
     title: {
       ro: "De ce să alegi o mașină de închiriat 4x4 pe timp de iarna în Cluj-Napoca?",
       en: "Why choose a 4x4 rental car in winter in Cluj-Napoca?",
@@ -51,7 +51,7 @@ export const articles: Article[] = [
     id: "2",
     slug: "masini-inchiriat-sarbatori",
     date: "2025-12-05",
-    image: "/images/cars/puma-01.jpg",
+    image: "/images/cars/ford-puma-automat-1.jpg",
     title: {
       ro: "Ce mașini de închiriat sunt potrivite pentru perioada sărbătorilor?",
       en: "Which rental cars are best for the holiday season?",

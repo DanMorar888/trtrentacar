@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { writeFile, mkdir } from "fs/promises";
+import { writeFile, mkdir, readdir } from "fs/promises";
 import path from "path";
 import sharp from "sharp";
 import { verifyAdminToken, getCookieName } from "@/lib/admin-auth";
+import { slugFromName } from "@/lib/cars-db";
 
 const MAX_UPLOAD_WIDTH = 1600;
 
@@ -39,11 +40,16 @@ export async function POST(request: Request) {
   } catch {
     // Format necunoscut pentru sharp: păstrăm fișierul original.
   }
-  const safeSlug = slug.replace(/[^a-z0-9-]/gi, "-").toLowerCase() || "image";
-  const unique = `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
-  const filename = `${safeSlug}-${unique}${ext}`;
+  const safeSlug = slugFromName(slug) || "image";
   const dir = path.join(process.cwd(), "public", "images", "cars");
   await mkdir(dir, { recursive: true });
+  const numbered = new RegExp(`^${safeSlug}-(\\d+)\\.[a-z]+$`, "i");
+  let lastNumber = 0;
+  for (const name of await readdir(dir)) {
+    const match = name.match(numbered);
+    if (match) lastNumber = Math.max(lastNumber, Number(match[1]));
+  }
+  const filename = `${safeSlug}-${lastNumber + 1}${ext}`;
   const filepath = path.join(dir, filename);
   await writeFile(filepath, buffer);
 
