@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
+import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import { AutoRentalSchema, OrganizationWebSiteJsonLd } from "@/components/JsonLd";
 import { LocaleProvider } from "@/i18n/LocaleProvider";
 import { getDictionary, getLocale } from "@/i18n/get-locale";
@@ -63,6 +64,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <BackToTop />
+          <ServiceWorkerRegister />
         </LocaleProvider>
       </body>
     </html>
