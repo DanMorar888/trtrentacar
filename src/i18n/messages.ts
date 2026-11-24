@@ -72,7 +72,7 @@ export const ro = {
     about1:
       "{name} vă oferă servicii de închirieri auto Cluj la înalte standarde profesionale. Ofertele noastre de închiriere pe termen scurt sau lung se adresează atât persoanelor fizice cât și persoanelor juridice.",
     about2:
-      "Dispunem de un parc auto variat, de la clasa Economic la Medium și SUV. În funcție de modelul și durata contractului, oferim unele dintre cele mai bune prețuri de închirieri mașini Cluj.",
+      "Dispunem de un parc auto variat, de la clasa Economic la SUV și Microbuz cu 9 locuri. În funcție de modelul și durata contractului, oferim unele dintre cele mai bune prețuri de închirieri mașini Cluj.",
     ctaTitle: "Livrare și predare gratuită la orice oră",
     ctaText: "Rezervă-ți acum mașina preferată pentru un preț cât mai bun.",
     ctaBook: "Rezerva o mașină",
@@ -478,7 +478,7 @@ export const en: Messages = {
     about1:
       "{name} offers professional car rental services in Cluj. Our short- and long-term offers are available for both individuals and companies.",
     about2:
-      "We have a varied fleet, from Economy to Medium and SUV. Depending on the model and rental length, we offer some of the best car rental prices in Cluj.",
+      "We have a varied fleet, from Economy to SUV and 9-seater vans. Depending on the model and rental length, we offer some of the best car rental prices in Cluj.",
     ctaTitle: "Free delivery and drop-off at any time",
     ctaText: "Book your favourite car now for the best price.",
     ctaBook: "Book a car",
