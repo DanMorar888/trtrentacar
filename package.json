@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "optimize-images": "node scripts/optimize-images.mjs",
-    "warm-images": "node scripts/warm-images.mjs"
+    "warm-images": "node scripts/warm-images.mjs",
+    "make-og-image": "node scripts/make-og-image.mjs"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
