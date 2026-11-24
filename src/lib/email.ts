@@ -5,7 +5,11 @@ import { formatDisplayDate } from "@/lib/format-date";
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 const fromEmail = process.env.FROM_EMAIL || "onboarding@resend.dev";
-const adminEmail = process.env.ADMIN_EMAIL || siteConfig.contact.email;
+/** ADMIN_EMAIL acceptă mai multe adrese separate prin virgulă. */
+const adminEmail = (process.env.ADMIN_EMAIL || siteConfig.contact.email)
+  .split(",")
+  .map((address) => address.trim())
+  .filter(Boolean);
 
 function reservationSummaryHtml(r: Reservation): string {
   return `
