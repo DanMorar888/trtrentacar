@@ -28,9 +28,9 @@ export function AboutPageContent() {
   ];
   const why = [t.about.why1, t.about.why2, t.about.why3];
   const stats = [
-    { value: 680, label: t.about.clients, animate: true },
+    { value: 1800, label: t.about.clients, animate: true },
     { value: 40, label: t.about.cars, animate: true },
-    { value: 8, label: t.about.years, animate: true },
+    { value: 9, label: t.about.years, animate: true },
     { value: 7, label: t.about.counties, animate: false },
   ];
 
