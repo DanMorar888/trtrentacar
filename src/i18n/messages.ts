@@ -90,7 +90,7 @@ export const ro = {
       },
       {
         q: "2. Ce documente sunt necesare pentru a închiria o mașină?",
-        a: "Pentru a închiria o mașină de la TRT Rent a Car, vei avea nevoie de:\n• Un permis de conducere valabil (național sau internațional).\n• Un act de identitate (carte de identitate sau pașaport).\n• Un card de credit pe numele tău pentru a garanta închirierea și a acoperi eventualele daune.",
+        a: "Pentru a închiria o mașină de la TRT Rent a Car, vei avea nevoie de:\n• Un permis de conducere valabil (național sau internațional).\n• Un act de identitate (carte de identitate sau pașaport).",
       },
       {
         q: "3. Care este vârsta minimă pentru a închiria o mașină?",
@@ -496,7 +496,7 @@ export const en: Messages = {
       },
       {
         q: "2. What documents are needed to rent a car?",
-        a: "To rent a car from TRT Rent a Car, you will need:\n• A valid driving licence (national or international).\n• An identity document (identity card or passport).\n• A credit card in your name to guarantee the rental and to cover possible damage.",
+        a: "To rent a car from TRT Rent a Car, you will need:\n• A valid driving licence (national or international).\n• An identity document (identity card or passport).",
       },
       {
         q: "3. What is the minimum age to rent a car?",
