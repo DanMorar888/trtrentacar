@@ -14,11 +14,15 @@ export function absoluteUrl(path: string): string {
   return `${base}${normalized}`;
 }
 
+/**
+ * Engleza se alege dintr-un cookie, nu dintr-o adresă separată: `?lang=en` doar
+ * setează cookie-ul și redirecționează înapoi. O astfel de adresă nu poate fi
+ * declarată ca alternativă hreflang, așa că anunțăm doar varianta română.
+ */
 export function alternateLanguages(path: string): Record<string, string> {
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
   return {
     ro: absoluteUrl(canonicalPath),
-    en: `${absoluteUrl(canonicalPath)}?lang=en`,
     "x-default": absoluteUrl(canonicalPath),
   };
 }
