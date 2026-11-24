@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { articles, getArticleBySlug } from "@/data/articles";
 import { getDictionary, getLocale } from "@/i18n/get-locale";
 import { buildPageMetadata } from "@/lib/metadata";
-import { siteConfig } from "@/config/site";
 import { CarImage } from "@/components/CarImage";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
 import { BlogPostingJsonLd } from "@/components/JsonLd";
@@ -23,11 +22,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const t = getDictionary(locale);
   const article = getArticleBySlug(slug);
   if (!article) return { title: t.blog.notFound };
-  const title = `${article.title[locale]} | ${siteConfig.name}`;
+  // Titlurile articolelor sunt lungi; fără sufixul cu numele firmei rămân întregi în Google.
   return buildPageMetadata({
     locale,
     path: `/blog/${slug}`,
-    title,
+    title: article.title[locale],
     description: article.excerpt[locale],
     ogImage: article.image,
   });
