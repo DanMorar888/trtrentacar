@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "warm-images": "node scripts/warm-images.mjs"
   },
   "dependencies": {
     "date-fns": "^4.1.0",

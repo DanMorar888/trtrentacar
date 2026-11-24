@@ -2,7 +2,10 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { writeFile, mkdir } from "fs/promises";
 import path from "path";
+import sharp from "sharp";
 import { verifyAdminToken, getCookieName } from "@/lib/admin-auth";
+
+const MAX_UPLOAD_WIDTH = 1600;
 
 async function isAdmin(): Promise<boolean> {
   const cookieStore = await cookies();
@@ -23,8 +26,19 @@ export async function POST(request: Request) {
   }
 
   const bytes = await file.arrayBuffer();
-  const buffer = Buffer.from(bytes);
-  const ext = path.extname(file.name) || ".jpg";
+  let buffer: Buffer = Buffer.from(bytes);
+  let ext = path.extname(file.name) || ".jpg";
+  try {
+    buffer = await sharp(buffer)
+      .rotate()
+      .resize({ width: MAX_UPLOAD_WIDTH, withoutEnlargement: true })
+      .flatten({ background: "#ffffff" })
+      .jpeg({ quality: 80, mozjpeg: true, progressive: true })
+      .toBuffer();
+    ext = ".jpg";
+  } catch {
+    // Format necunoscut pentru sharp: păstrăm fișierul original.
+  }
   const safeSlug = slug.replace(/[^a-z0-9-]/gi, "-").toLowerCase() || "image";
   const unique = `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
   const filename = `${safeSlug}-${unique}${ext}`;
