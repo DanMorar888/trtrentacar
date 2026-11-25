@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { localePath } from "@/i18n/paths";
 
 export default function Error({
   error,
@@ -10,7 +11,7 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   useEffect(() => {
     console.error(error);
@@ -31,7 +32,7 @@ export default function Error({
           {t.error.retry}
         </button>
         <a
-          href="/"
+          href={localePath(locale, "/")}
           className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
         >
           {t.error.home}

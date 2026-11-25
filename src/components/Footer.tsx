@@ -1,13 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import Image from "next/image";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { useI18n } from "@/i18n/LocaleProvider";
 
 export function Footer() {
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
   const [newsletterMessage, setNewsletterMessage] = useState("");
@@ -57,15 +57,16 @@ export function Footer() {
       <div className="container-narrow py-12">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:items-start">
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
-            <Link href="/" className="inline-flex">
+            <LocaleLink href="/" className="inline-flex">
               <Image
-                src="/images/cars/logo-footer.jpg"
+                src="/images/cars/logo-footer.webp"
                 alt={siteConfig.name}
                 width={320}
                 height={128}
+                unoptimized
                 className="h-28 w-auto md:h-24"
               />
-            </Link>
+            </LocaleLink>
             <p className="mt-3 max-w-[16rem] text-sm leading-relaxed text-gray-400">{t.footer.tagline}</p>
             <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start">
               <a
@@ -100,9 +101,9 @@ export function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-wider text-gray-300">{t.footer.useful}</h3>
             <ul className="mt-3 space-y-2">
               <li>
-                <Link href="/inchirieri-masini-cluj" className="text-sm text-gray-400 hover:text-primary">
-                  {locale === "en" ? "Reservations" : "Rezervări"}
-                </Link>
+                <LocaleLink href="/inchirieri-masini-cluj" className="text-sm text-gray-400 hover:text-primary">
+                  {t.footer.reservations}
+                </LocaleLink>
               </li>
               {footerLinks.map((link) => (
                 <li key={link.href}>
@@ -116,9 +117,9 @@ export function Footer() {
                       {link.label}
                     </a>
                   ) : (
-                    <Link href={link.href} className="text-sm text-gray-400 hover:text-primary">
+                    <LocaleLink href={link.href} className="text-sm text-gray-400 hover:text-primary">
                       {link.label}
-                    </Link>
+                    </LocaleLink>
                   )}
                 </li>
               ))}
@@ -147,10 +148,11 @@ export function Footer() {
                 aria-label="ANPC SAL"
               >
                 <Image
-                  src="/images/cars/anpc-sal.png"
+                  src="/images/cars/anpc-sal.webp"
                   alt="ANPC SAL"
                   width={120}
                   height={36}
+                  unoptimized
                   className="h-10 w-auto object-contain transition-opacity hover:opacity-90"
                 />
               </a>
@@ -161,10 +163,11 @@ export function Footer() {
                 aria-label="Consumer Redress EU"
               >
                 <Image
-                  src="/images/cars/anpc-sol.png"
+                  src="/images/cars/anpc-sol.webp"
                   alt="ANPC SOL"
                   width={120}
                   height={36}
+                  unoptimized
                   className="h-10 w-auto object-contain transition-opacity hover:opacity-90"
                 />
               </a>

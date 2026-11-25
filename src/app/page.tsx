@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { Suspense } from "react";
 import { ReservationWidgetWithSuspense } from "@/components/ReservationWidgetWithSuspense";
 import { FeaturedCarsWithPrices } from "@/components/FeaturedCarsWithPrices";
@@ -24,7 +24,7 @@ async function HomeFeatured() {
   } catch {
     seasons = [];
   }
-  const jsonLdLang = locale === "en" ? "en" : "ro";
+  const jsonLdLang = locale;
   return (
     <>
       <ProductJsonLdScripts cars={featuredCars} inLanguage={jsonLdLang} />
@@ -141,12 +141,12 @@ export default async function HomePage() {
           <h2 className="section-title-dark">{t.home.ctaTitle}</h2>
           <p className="mt-6 text-base text-white/90">{t.home.ctaText}</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link href="/inchirieri-masini-cluj" className="rounded-lg bg-white px-8 py-3.5 text-base font-semibold text-primary shadow-md transition hover:bg-gray-100 hover:shadow-lg">
+            <LocaleLink href="/inchirieri-masini-cluj" className="rounded-lg bg-white px-8 py-3.5 text-base font-semibold text-primary shadow-md transition hover:bg-gray-100 hover:shadow-lg">
               {t.home.ctaBook}
-            </Link>
-            <Link href="/termeni-si-conditii" className="rounded-lg border-2 border-white px-8 py-3.5 text-base font-semibold transition hover:bg-white/15">
+            </LocaleLink>
+            <LocaleLink href="/termeni-si-conditii" className="rounded-lg border-2 border-white px-8 py-3.5 text-base font-semibold transition hover:bg-white/15">
               {t.home.ctaTerms}
-            </Link>
+            </LocaleLink>
           </div>
         </div>
       </section>

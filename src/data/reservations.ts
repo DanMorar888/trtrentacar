@@ -3,7 +3,7 @@ export type ReservationStatus = "pending" | "confirmed" | "cancelled";
 
 export interface Reservation {
   id: string;
-  /** Număr rezervare afișat: 8RC + 5 cifre (ex: 8RC00001) */
+  /** Număr rezervare afișat: TRT + 6 cifre aleatorii (ex: TRT482913) */
   reference?: string;
   status: ReservationStatus;
   /** Slug mașină selectată */

@@ -1,6 +1,10 @@
 import { siteConfig } from "@/config/site";
 import type { Car } from "@/data/cars";
 import { DAY_INTERVALS } from "@/data/cars";
+import type { Locale } from "@/i18n/config";
+import { getDictionary, getLocale } from "@/i18n/get-locale";
+import { interpolate } from "@/i18n/interpolate";
+import { localePath } from "@/i18n/paths";
 import {
   ORGANIZATION_ID,
   ORGANIZATION_LOGO_URL,
@@ -26,14 +30,28 @@ function brandName(car: Car): string {
   return car.name.trim().split(/\s+/)[0] || "Auto";
 }
 
-function carPageUrl(car: Car): string {
-  return `${SITE_URL.replace(/\/$/, "")}/inchirieri-masini-cluj/${car.slug}`;
+function absoluteLocaleUrl(locale: Locale, path: string): string {
+  const base = SITE_URL.replace(/\/$/, "");
+  return `${base}${localePath(locale, path)}`;
 }
 
-function productDescription(car: Car): string {
-  return [brandName(car), car.name, car.categoryLabel, car.year ? `an ${car.year}` : null]
-    .filter(Boolean)
-    .join(" · ");
+function asLocale(value: string | undefined): Locale {
+  return value === "en" || value === "hu" ? value : "ro";
+}
+
+function carPageUrl(car: Car, locale: Locale): string {
+  return absoluteLocaleUrl(locale, `/inchirieri-masini-cluj/${car.slug}`);
+}
+
+function productDescription(car: Car, locale: Locale): string {
+  const yearLabel = car.year
+    ? locale === "hu"
+      ? `év ${car.year}`
+      : locale === "en"
+        ? `year ${car.year}`
+        : `an ${car.year}`
+    : null;
+  return [brandName(car), car.name, car.categoryLabel, yearLabel].filter(Boolean).join(" · ");
 }
 
 function carImages(car: Car): { "@type": "ImageObject"; url: string } | { "@type": "ImageObject"; url: string }[] {
@@ -115,7 +133,7 @@ export function buildOrganizationJsonLd() {
       telephone: schemaTelephone(),
       email: siteConfig.contact.email,
       contactType: "customer service",
-      availableLanguage: ["Romanian", "English"],
+      availableLanguage: ["Romanian", "English", "Hungarian"],
       areaServed: "RO",
     },
   } as const;
@@ -128,7 +146,7 @@ export function buildWebSiteJsonLd() {
     "@id": `${SITE_URL}/#website`,
     name: siteConfig.name,
     url: `${SITE_URL}/`,
-    inLanguage: ["ro", "en"],
+    inLanguage: ["ro", "en", "hu"],
     publisher: { "@id": ORGANIZATION_ID },
   } as const;
 }
@@ -208,10 +226,11 @@ export function buildProductJsonLdForCar(
   const { min, max } = getCarPriceMinMax(car);
   const low = Math.round(min * 100) / 100;
   const high = Math.round(max * 100) / 100;
-  const pageUrl = carPageUrl(car);
+  const locale = asLocale(options?.inLanguage);
+  const pageUrl = carPageUrl(car, locale);
   const offerPath = options?.offerPath;
   const offerUrl = offerPath
-    ? `${SITE_URL}${offerPath.startsWith("/") ? offerPath : `/${offerPath}`}`
+    ? absoluteLocaleUrl(locale, offerPath.startsWith("/") ? offerPath : `/${offerPath}`)
     : pageUrl;
 
   const base: Record<string, unknown> = {
@@ -221,7 +240,7 @@ export function buildProductJsonLdForCar(
     name: car.name,
     url: pageUrl,
     sku: car.id,
-    description: productDescription(car),
+    description: productDescription(car, locale),
     image: carImages(car),
     brand: {
       "@type": "Brand",
@@ -297,15 +316,24 @@ export function FaqJsonLd({
 
 /** Schema JSON-LD pentru pagina de detaliu mașină: WebPage + Product + BreadcrumbList */
 export function CarDetailJsonLd({ car, slug }: { car: Car; slug: string }) {
-  const baseUrl = SITE_URL.replace(/\/$/, "");
-  const pageUrl = carPageUrl(car);
-  const listUrl = `${baseUrl}/inchirieri-masini-cluj`;
+  const locale = getLocale();
+  const t = getDictionary(locale);
+  const pageUrl = absoluteLocaleUrl(locale, `/inchirieri-masini-cluj/${slug}`);
+  const listUrl = absoluteLocaleUrl(locale, "/inchirieri-masini-cluj");
+  const homeUrl = absoluteLocaleUrl(locale, "/");
   const productId = `${pageUrl}#product`;
   const breadcrumbId = `${pageUrl}#breadcrumb`;
-  const pageTitle = `${car.name} – Închirieri Auto Cluj | ${siteConfig.name}`;
-  const specLine = [car.year, car.engine, car.fuel].filter(Boolean).join(", ");
-  const pageDescription = `Închiriază ${car.name} la ${siteConfig.name} Cluj. ${car.pricePerDay} €/zi. ${specLine}. Rezervare rapidă.`;
+  const fuel = t.specs[car.fuel as keyof typeof t.specs] ?? car.fuel;
+  const pageTitle = interpolate(t.car.metaTitle, { name: car.name });
+  const pageDescription = interpolate(t.car.metaDescription, {
+    name: car.name,
+    year: car.year ? `, ${car.year}` : "",
+    engine: car.engine,
+    fuel,
+    price: car.pricePerDay,
+  });
   const brand = brandName(car);
+  const unitText = locale === "hu" ? "nap" : locale === "en" ? "day" : "zi";
 
   const schema = {
     "@context": "https://schema.org",
@@ -326,7 +354,7 @@ export function CarDetailJsonLd({ car, slug }: { car: Car; slug: string }) {
         name: car.name,
         url: pageUrl,
         sku: car.id,
-        description: productDescription(car),
+        description: productDescription(car, locale),
         image: carImages(car),
         brand: { "@type": "Brand", name: brand },
         category: car.categoryLabel,
@@ -337,7 +365,7 @@ export function CarDetailJsonLd({ car, slug }: { car: Car; slug: string }) {
         seller: { "@id": ORGANIZATION_ID },
         offers: {
           "@type": "AggregateOffer",
-          url: `${baseUrl}/rezervare?car=${slug}`,
+          url: absoluteLocaleUrl(locale, `/rezervare?car=${slug}`),
           priceCurrency: "EUR",
           lowPrice: Math.round(getCarPriceMinMax(car).min * 100) / 100,
           highPrice: Math.round(getCarPriceMinMax(car).max * 100) / 100,
@@ -348,7 +376,7 @@ export function CarDetailJsonLd({ car, slug }: { car: Car; slug: string }) {
             price: car.pricePerDay,
             priceCurrency: "EUR",
             unitCode: "DAY",
-            unitText: "zi",
+            unitText,
           },
         },
       },
@@ -356,8 +384,8 @@ export function CarDetailJsonLd({ car, slug }: { car: Car; slug: string }) {
         "@type": "BreadcrumbList",
         "@id": breadcrumbId,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Acasă", item: `${baseUrl}/` },
-          { "@type": "ListItem", position: 2, name: "Mașini", item: listUrl },
+          { "@type": "ListItem", position: 1, name: t.car.home, item: homeUrl },
+          { "@type": "ListItem", position: 2, name: t.car.cars, item: listUrl },
           { "@type": "ListItem", position: 3, name: car.name },
         ],
       },
@@ -414,7 +442,9 @@ export function BlogPostingJsonLd({
   image: string;
   locale: string;
 }) {
-  const pageUrl = `${SITE_URL}/blog/${slug}`;
+  const lang = asLocale(locale);
+  const t = getDictionary(lang);
+  const pageUrl = absoluteLocaleUrl(lang, `/blog/${slug}`);
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -425,7 +455,7 @@ export function BlogPostingJsonLd({
         description,
         datePublished: date,
         dateModified: date,
-        inLanguage: locale,
+        inLanguage: lang,
         image: { "@type": "ImageObject", url: absoluteImageUrl(image) },
         author: { "@id": ORGANIZATION_ID },
         publisher: { "@id": ORGANIZATION_ID },
@@ -445,8 +475,8 @@ export function BlogPostingJsonLd({
         "@type": "BreadcrumbList",
         "@id": `${pageUrl}#breadcrumb`,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+          { "@type": "ListItem", position: 1, name: t.car.home, item: absoluteLocaleUrl(lang, "/") },
+          { "@type": "ListItem", position: 2, name: t.nav.blog, item: absoluteLocaleUrl(lang, "/blog") },
           { "@type": "ListItem", position: 3, name: title },
         ],
       },

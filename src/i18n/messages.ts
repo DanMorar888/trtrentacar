@@ -1,3 +1,6 @@
+import type { Locale } from "@/i18n/config";
+import { hu } from "@/i18n/hu";
+
 export const ro = {
   meta: {
     homeTitle: "Rent a Car Cluj Napoca | Închirieri Auto 24/7 | TRT Rent a Car",
@@ -33,9 +36,11 @@ export const ro = {
     menu: "Meniu",
     switchToEn: "English",
     switchToRo: "Română",
+    switchToHu: "Magyar",
     backToTop: "Înapoi sus",
   },
   footer: {
+    reservations: "Rezervări",
     useful: "Info utile",
     exchange: "Curs valutar",
     attractions: "Obiective turistice Cluj",
@@ -439,9 +444,11 @@ export const en: Messages = {
     menu: "Menu",
     switchToEn: "English",
     switchToRo: "Română",
+    switchToHu: "Magyar",
     backToTop: "Back to top",
   },
   footer: {
+    reservations: "Reservations",
     useful: "Useful info",
     exchange: "Exchange rate",
     attractions: "Cluj tourist attractions",
@@ -806,4 +813,4 @@ export const en: Messages = {
   },
 };
 
-export const dictionaries: Record<"ro" | "en", Messages> = { ro, en };
+export const dictionaries: Record<Locale, Messages> = { ro, en, hu };

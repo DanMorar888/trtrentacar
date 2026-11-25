@@ -24,14 +24,17 @@ export async function ReviewsSection() {
         <div className="mt-8 flex min-w-0 flex-wrap items-center justify-center gap-x-6 gap-y-4">
           <a href="https://topcarrentals.ro/" target="_blank" rel="noopener" className="block max-w-full">
             <Image
-              src="/images/cars/topcarrentals-trtrentacar-937x250.png"
+              src="/images/cars/topcarrentals-trtrentacar-937x250.webp"
               alt={
                 locale === "en"
                   ? "TopCarRentals.ro — rating 5.0 out of 5"
-                  : "TopCarRentals.ro — notă 5,0 din 5"
+                  : locale === "hu"
+                    ? "TopCarRentals.ro — 5,0 az 5-ből"
+                    : "TopCarRentals.ro — notă 5,0 din 5"
               }
               width={937}
               height={250}
+              unoptimized
               className="h-12 w-auto max-w-full rounded-md bg-white object-contain sm:h-16"
             />
           </a>
@@ -42,14 +45,17 @@ export async function ReviewsSection() {
             className="block max-w-full"
           >
             <Image
-              src="/images/cars/dark_horizontal_ro.png"
+              src="/images/cars/dark_horizontal_ro.webp"
               alt={
                 locale === "en"
                   ? "Partner of the Firmă de Încredere project"
-                  : "Partener al proiectului Firmă de Încredere"
+                  : locale === "hu"
+                    ? "A Firmă de Încredere projekt partnere"
+                    : "Partener al proiectului Firmă de Încredere"
               }
               width={1149}
               height={263}
+              unoptimized
               className="h-12 w-auto max-w-full object-contain sm:h-16"
             />
           </a>

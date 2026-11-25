@@ -8,6 +8,7 @@ import { Button } from "@/components/Button";
 import { DateField } from "@/components/DateField";
 import { TimeSelect } from "@/components/TimeSelect";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { localePath, stripLocalePrefix } from "@/i18n/paths";
 
 const DEFAULT_LOCATION_ID = "aeroport-cluj";
 
@@ -31,7 +32,7 @@ interface ReservationWidgetProps {
 }
 
 export function ReservationWidget({ variant = "full", carSlug, title, hideActions }: ReservationWidgetProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -75,14 +76,14 @@ export function ReservationWidget({ variant = "full", carSlug, title, hideAction
       if (loc) params.set("loc", loc);
       if (returnLoc) params.set("returnLoc", returnLoc);
       const query = params.toString();
-      if (pathname === "/") {
-        router.replace(`/?${query}`, { scroll: false });
-      } else if (pathname.startsWith("/inchirieri-masini-cluj")) {
-        const base = pathname.split("?")[0];
-        router.replace(`${base}?${query}`, { scroll: false });
+      const barePath = stripLocalePrefix(pathname);
+      if (barePath === "/") {
+        router.replace(localePath(locale, `/?${query}`), { scroll: false });
+      } else if (barePath.startsWith("/inchirieri-masini-cluj")) {
+        router.replace(localePath(locale, `${barePath}?${query}`), { scroll: false });
       }
     }
-  }, [searchParams, pathname, carSlug, router]);
+  }, [searchParams, pathname, carSlug, router, locale]);
 
   useEffect(() => {
     if (!returnDate || !pickupDate) {
@@ -116,13 +117,13 @@ export function ReservationWidget({ variant = "full", carSlug, title, hideAction
     if (pickupLocation) params.set("loc", pickupLocation);
     if (returnLocation) params.set("returnLoc", returnLocation);
     const query = params.toString();
-    if (pathname === "/") {
-      router.replace(query ? `/?${query}` : "/", { scroll: false });
-    } else if (pathname.startsWith("/inchirieri-masini-cluj")) {
-      const base = pathname.split("?")[0];
-      router.replace(query ? `${base}?${query}` : base, { scroll: false });
+    const barePath = stripLocalePrefix(pathname);
+    if (barePath === "/") {
+      router.replace(localePath(locale, query ? `/?${query}` : "/"), { scroll: false });
+    } else if (barePath.startsWith("/inchirieri-masini-cluj")) {
+      router.replace(localePath(locale, query ? `${barePath}?${query}` : barePath), { scroll: false });
     }
-  }, [carSlug, pathname, pickupDate, returnDate, pickupTime, returnTime, pickupLocation, returnLocation, returnDateError, router]);
+  }, [carSlug, pathname, pickupDate, returnDate, pickupTime, returnTime, pickupLocation, returnLocation, returnDateError, router, locale]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -143,8 +144,8 @@ export function ReservationWidget({ variant = "full", carSlug, title, hideAction
     if (returnLocation) params.set("returnLoc", returnLocation);
     const query = params.toString();
     const path = carSlug
-      ? `/inchirieri-masini-cluj/${carSlug}${query ? `?${query}` : ""}`
-      : `/inchirieri-masini-cluj${query ? `?${query}` : ""}`;
+      ? localePath(locale, `/inchirieri-masini-cluj/${carSlug}${query ? `?${query}` : ""}`)
+      : localePath(locale, `/inchirieri-masini-cluj${query ? `?${query}` : ""}`);
     router.push(path);
     setSubmitting(false);
   };
@@ -165,7 +166,7 @@ export function ReservationWidget({ variant = "full", carSlug, title, hideAction
   if (pickupLocation) allCarsParams.set("loc", pickupLocation);
   if (returnLocation) allCarsParams.set("returnLoc", returnLocation);
   const allCarsQuery = allCarsParams.toString();
-  const allCarsHref = `/inchirieri-masini-cluj${allCarsQuery ? `?${allCarsQuery}` : ""}`;
+  const allCarsHref = localePath(locale, `/inchirieri-masini-cluj${allCarsQuery ? `?${allCarsQuery}` : ""}`);
 
   return (
     <form onSubmit={handleSubmit} className={`mx-auto w-full max-w-5xl rounded-xl border border-gray-200/80 bg-white shadow-md ${variant === "compact" ? "p-5" : "p-6"}`}>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import type { Locale } from "@/i18n/config";
+import { locales, type Locale } from "@/i18n/config";
+import { localePath } from "@/i18n/paths";
 import { openGraphDefaultImages, SITE_URL } from "@/lib/site-identity";
 
 export const ROBOTS_NOINDEX_FOLLOW: Metadata["robots"] = {
@@ -15,20 +16,23 @@ export function absoluteUrl(path: string): string {
 }
 
 /**
- * Engleza se alege dintr-un cookie, nu dintr-o adresă separată: `?lang=en` doar
- * setează cookie-ul și redirecționează înapoi. O astfel de adresă nu poate fi
- * declarată ca alternativă hreflang, așa că anunțăm doar varianta română.
+ * Fiecare limbă are adresă proprie: /tarife, /en/tarife, /hu/tarife.
+ * hreflang indică aceste adrese, iar x-default rămâne varianta română.
  */
 export function alternateLanguages(path: string): Record<string, string> {
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
-  return {
-    ro: absoluteUrl(canonicalPath),
-    "x-default": absoluteUrl(canonicalPath),
-  };
+  const languages: Record<string, string> = {};
+  for (const locale of locales) {
+    languages[locale] = absoluteUrl(localePath(locale, canonicalPath));
+  }
+  languages["x-default"] = absoluteUrl(localePath("ro", canonicalPath));
+  return languages;
 }
 
 export function openGraphLocale(locale: Locale): string {
-  return locale === "en" ? "en_US" : "ro_RO";
+  if (locale === "en") return "en_US";
+  if (locale === "hu") return "hu_HU";
+  return "ro_RO";
 }
 
 type BuildPageMetadataOptions = {
@@ -49,6 +53,8 @@ export function buildPageMetadata({
   ogImage,
 }: BuildPageMetadataOptions): Metadata {
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
+  const localizedPath = localePath(locale, canonicalPath);
+  const noindex = typeof robots === "object" && robots !== null && "index" in robots && robots.index === false;
   const defaultImages = openGraphDefaultImages();
   const images = ogImage
     ? [
@@ -67,15 +73,16 @@ export function buildPageMetadata({
     title,
     description,
     alternates: {
-      canonical: absoluteUrl(canonicalPath),
-      languages: alternateLanguages(canonicalPath),
+      canonical: absoluteUrl(localizedPath),
+      ...(noindex ? {} : { languages: alternateLanguages(canonicalPath) }),
     },
     openGraph: {
       title,
       description,
-      url: absoluteUrl(canonicalPath),
+      url: absoluteUrl(localizedPath),
       siteName: siteConfig.name,
       locale: openGraphLocale(locale),
+      alternateLocale: locales.filter((item) => item !== locale).map(openGraphLocale),
       type: "website",
       ...(images?.length ? { images } : {}),
     },

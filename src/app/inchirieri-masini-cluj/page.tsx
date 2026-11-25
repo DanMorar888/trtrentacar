@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { ItemListJsonLd, ProductJsonLdScripts } from "@/components/JsonLd";
 import { getDictionary, getLocale } from "@/i18n/get-locale";
 import { buildPageMetadata } from "@/lib/metadata";
+import { localePath } from "@/i18n/paths";
 import { SITE_URL } from "@/lib/site-identity";
 
 export const revalidate = 120;
@@ -41,7 +42,7 @@ async function MasiniListAsync() {
   }
   const locale = getLocale();
   const t = getDictionary(locale);
-  const jsonLdLang = locale === "en" ? "en" : "ro";
+  const jsonLdLang = locale;
   return (
     <>
       <ProductJsonLdScripts cars={cars} inLanguage={jsonLdLang} />
@@ -49,7 +50,7 @@ async function MasiniListAsync() {
         name={t.fleet.title}
         items={cars.map((car) => ({
           name: car.name,
-          url: `${SITE_URL}/inchirieri-masini-cluj/${car.slug}`,
+          url: `${SITE_URL.replace(/\/$/, "")}${localePath(locale, `/inchirieri-masini-cluj/${car.slug}`)}`,
         }))}
       />
       <CarListWithFilters cars={cars} seasons={seasons} />

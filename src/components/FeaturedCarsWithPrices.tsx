@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { useSearchParams } from "next/navigation";
 import { CarCard } from "@/components/CarCard";
 import { rentalDaysBetween } from "@/lib/rental-days";
@@ -45,7 +45,7 @@ export function FeaturedCarsWithPrices({ cars, seasons = [] }: FeaturedCarsWithP
     const sortPriceA = resolvedA?.pricePerDay ?? a.pricePerDay;
     const sortPriceB = resolvedB?.pricePerDay ?? b.pricePerDay;
     if (sortPriceA !== sortPriceB) return sortPriceA - sortPriceB;
-    return a.name.localeCompare(b.name, locale);
+    return a.name.localeCompare(b.name, locale === "hu" ? "hu-HU" : locale === "en" ? "en-US" : "ro-RO");
   });
 
   return (
@@ -58,9 +58,9 @@ export function FeaturedCarsWithPrices({ cars, seasons = [] }: FeaturedCarsWithP
         ))}
       </div>
       <div className="mt-10 text-center">
-        <Link href={listingHref} className="btn-primary">
+        <LocaleLink href={listingHref} className="btn-primary">
           {t.home.seeAll}
-        </Link>
+        </LocaleLink>
       </div>
     </>
   );

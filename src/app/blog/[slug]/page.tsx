@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { articles, getArticleBySlug } from "@/data/articles";
@@ -53,13 +53,13 @@ export default async function BlogArticlePage({ params }: PageProps) {
         <HeroBackdrop priority />
         <div className="container-narrow relative z-10 flex w-full flex-col items-center text-center">
           <nav className="mb-4 text-sm text-gray-300" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-primary">
+            <LocaleLink href="/" className="hover:text-primary">
               {t.car.home}
-            </Link>
+            </LocaleLink>
             <span className="mx-2">/</span>
-            <Link href="/blog" className="hover:text-primary">
+            <LocaleLink href="/blog" className="hover:text-primary">
               {t.nav.blog}
-            </Link>
+            </LocaleLink>
           </nav>
           <h1 className="section-title-dark mx-auto max-w-4xl">{article.title[locale]}</h1>
           <p className="mt-3 text-sm text-gray-300">
@@ -76,7 +76,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
               alt={article.title[locale]}
               fallbackName={article.title[locale]}
               className="!absolute inset-0"
-              sizes="(max-width: 768px) 100vw, 800px"
+              sizes="(max-width: 768px) calc(100vw - 2rem), 768px"
               priority
             />
           </div>
@@ -85,9 +85,9 @@ export default async function BlogArticlePage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: article.content[locale] }}
           />
           <p className="mt-10">
-            <Link href="/blog" className="font-semibold text-primary hover:underline">
+            <LocaleLink href="/blog" className="font-semibold text-primary hover:underline">
               ← {t.blog.back}
-            </Link>
+            </LocaleLink>
           </p>
         </div>
       </section>

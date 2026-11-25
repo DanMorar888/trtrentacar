@@ -17,6 +17,11 @@ export default function AdminCarsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [savingFeaturedId, setSavingFeaturedId] = useState<string | null>(null);
+  const [canManageFleet, setCanManageFleet] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    setCanManageFleet(!document.cookie.split("; ").some((part) => part === "admin_role=limited"));
+  }, []);
 
   useEffect(() => {
     fetch("/api/admin/cars")
@@ -51,7 +56,8 @@ export default function AdminCarsPage() {
     if (!confirm(`Ștergi mașina „${name}"?`)) return;
     const res = await fetch(`/api/admin/cars/${id}`, { method: "DELETE" });
     if (!res.ok) {
-      alert("Eroare la ștergere");
+      const data = await res.json().catch(() => ({}));
+      alert(data.error || "Eroare la ștergere");
       return;
     }
     setCars((prev) => prev.filter((c) => c.id !== id));
@@ -152,9 +158,11 @@ export default function AdminCarsPage() {
           >
             Export CSV
           </button>
-          <Link href="/admin/cars/new" className="btn-primary min-h-11">
-            Adaugă mașină
-          </Link>
+          {canManageFleet && (
+            <Link href="/admin/cars/new" className="btn-primary min-h-11">
+              Adaugă mașină
+            </Link>
+          )}
         </div>
       </div>
 
@@ -194,13 +202,15 @@ export default function AdminCarsPage() {
               <Link href={`/admin/cars/${car.id}/edit`} className={adminCardEditClass}>
                 Editează
               </Link>
-              <button
-                type="button"
-                onClick={() => handleDelete(car.id, car.name)}
-                className={adminCardDeleteClass}
-              >
-                Șterge
-              </button>
+              {canManageFleet && (
+                <button
+                  type="button"
+                  onClick={() => handleDelete(car.id, car.name)}
+                  className={adminCardDeleteClass}
+                >
+                  Șterge
+                </button>
+              )}
             </AdminCardActions>
           </AdminCard>
         ))}
@@ -254,13 +264,15 @@ export default function AdminCarsPage() {
                   <Link href={`/admin/cars/${car.id}/edit`} className="mr-3 text-sm text-green-500 hover:text-green-400 hover:underline">
                     Editează
                   </Link>
-                  <button
-                    type="button"
-                    onClick={() => handleDelete(car.id, car.name)}
-                    className="text-sm text-red-400 hover:underline"
-                  >
-                    Șterge
-                  </button>
+                  {canManageFleet && (
+                    <button
+                      type="button"
+                      onClick={() => handleDelete(car.id, car.name)}
+                      className="text-sm text-red-400 hover:underline"
+                    >
+                      Șterge
+                    </button>
+                  )}
                 </td>
               </tr>
             ))}
@@ -268,7 +280,9 @@ export default function AdminCarsPage() {
         </table>
       </div>
       {cars.length === 0 && (
-        <p className="mt-6 text-center text-gray-400">Nicio mașină. Adaugă prima mașină.</p>
+        <p className="mt-6 text-center text-gray-400">
+          {canManageFleet ? "Nicio mașină. Adaugă prima mașină." : "Nicio mașină."}
+        </p>
       )}
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { DayPicker } from "react-day-picker";
-import { enUS, ro } from "react-day-picker/locale";
+import { enUS, hu, ro } from "react-day-picker/locale";
 import "react-day-picker/style.css";
 import type { Locale } from "@/i18n/config";
 
@@ -23,7 +23,7 @@ export function DatePickerPopover({
   return (
     <DayPicker
       mode="single"
-      locale={locale === "en" ? enUS : ro}
+      locale={locale === "en" ? enUS : locale === "hu" ? hu : ro}
       selected={selected}
       onSelect={onSelect}
       disabled={disabled}

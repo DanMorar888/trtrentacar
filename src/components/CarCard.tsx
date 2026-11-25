@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { siteConfig } from "@/config/site";
 import { getPriceForDays, type Car } from "@/data/cars";
 import { getSeasonForDate, type SeasonPeriod } from "@/data/seasons";
 import { CarImage } from "@/components/CarImage";
 import { interpolate } from "@/i18n/interpolate";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { localePath } from "@/i18n/paths";
 
 
 
@@ -53,11 +54,11 @@ interface CarCardProps {
 }
 
 export function CarCard({ car, showCategory, days, reservationQuery, pickupDate = "", pickupTime = "10:00", seasons = [] }: CarCardProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const fuel = t.specs[car.fuel as keyof typeof t.specs] ?? car.fuel;
   const transmission = t.specs[car.transmission as keyof typeof t.specs] ?? car.transmission;
-  const rezervareHref = `/rezervare?car=${car.slug}${reservationQuery ? `&${reservationQuery}` : ""}`;
-  const detaliiHref = `/inchirieri-masini-cluj/${car.slug}${reservationQuery ? `?${reservationQuery}` : ""}`;
+  const rezervareHref = localePath(locale, `/rezervare?car=${car.slug}${reservationQuery ? `&${reservationQuery}` : ""}`);
+  const detaliiHref = localePath(locale, `/inchirieri-masini-cluj/${car.slug}${reservationQuery ? `?${reservationQuery}` : ""}`);
   const season = getSeasonForDate(pickupDate, seasons);
   const resolved =
     days != null && days > 0
@@ -73,23 +74,23 @@ export function CarCard({ car, showCategory, days, reservationQuery, pickupDate 
   const periodDays = days != null && days > 0 ? days : 3;
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition hover:shadow-md">
-      <Link href={detaliiHref} prefetch={false} className="relative block aspect-[4/3] overflow-hidden bg-gray-200">
+      <LocaleLink href={detaliiHref} prefetch={false} className="relative block aspect-[4/3] overflow-hidden bg-gray-200">
         <CarImage
           src={car.image}
           alt={car.name}
           fallbackName={car.name}
           className="!absolute inset-0"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+          sizes="(max-width: 639px) calc(100vw - 2rem), (max-width: 1023px) calc(50vw - 2rem), 400px"
         />
-      </Link>
+      </LocaleLink>
       <div className="flex flex-1 flex-col p-4">
         {showCategory && (
           <span className="mb-1 text-xs font-medium uppercase tracking-wider text-primary">{car.categoryLabel}</span>
         )}
         <h2 className="text-lg font-semibold text-gray-900">
-          <Link href={detaliiHref} prefetch={false} className="hover:text-primary">
+          <LocaleLink href={detaliiHref} prefetch={false} className="hover:text-primary">
             {car.name}
-          </Link>
+          </LocaleLink>
         </h2>
         <ul className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-sm text-gray-600" aria-label={t.car.detailsAria}>
           {car.year ? (
@@ -130,9 +131,9 @@ export function CarCard({ car, showCategory, days, reservationQuery, pickupDate 
           <p className="mt-1.5 text-xs font-bold text-gray-600">{t.car.included}</p>
         </div>
         <div className="mt-auto flex items-stretch gap-2 pt-4">
-          <Link href={rezervareHref} prefetch={false} className="btn-primary flex-1 text-center">
+          <LocaleLink href={rezervareHref} prefetch={false} className="btn-primary flex-1 text-center">
             {t.car.bookNow}
-          </Link>
+          </LocaleLink>
           <a
             href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(interpolate(t.car.whatsappText, { name: car.name }))}`}
             target="_blank"

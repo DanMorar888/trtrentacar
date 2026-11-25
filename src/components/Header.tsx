@@ -1,15 +1,16 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { stripLocalePrefix } from "@/i18n/paths";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { LocaleLink } from "@/components/LocaleLink";
 
 export function Header() {
-  const pathname = usePathname();
+  const pathname = stripLocalePrefix(usePathname());
   const [mobileOpen, setMobileOpen] = useState(false);
   const { t } = useI18n();
 
@@ -25,20 +26,21 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-gray-700 bg-dark shadow-sm">
       <div className="container-narrow">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="inline-flex items-center">
+          <LocaleLink href="/" className="inline-flex items-center">
             <Image
-              src="/images/cars/logo-header.jpg"
+              src="/images/cars/logo-header.webp"
               alt={siteConfig.name}
               width={240}
               height={48}
               priority
+              unoptimized
               className="h-8 w-auto md:h-10"
             />
-          </Link>
+          </LocaleLink>
 
           <nav className="hidden md:flex md:items-center md:gap-6">
             {navLinks.map((link) => (
-              <Link
+              <LocaleLink
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium md:text-base ${
@@ -46,7 +48,7 @@ export function Header() {
                 }`}
               >
                 {link.label}
-              </Link>
+              </LocaleLink>
             ))}
           </nav>
 
@@ -88,7 +90,7 @@ export function Header() {
           <div className="border-t border-gray-800 py-4 md:hidden">
             <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <Link
+                <LocaleLink
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
@@ -97,7 +99,7 @@ export function Header() {
                   }`}
                 >
                   {link.label}
-                </Link>
+                </LocaleLink>
               ))}
               <div className="px-3 py-2">
                 <LanguageSwitcher />

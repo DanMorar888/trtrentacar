@@ -32,14 +32,29 @@ export async function generateMetadata(): Promise<Metadata> {
       default: t.meta.homeTitle,
       template: "%s",
     },
-    keywords: [
-      "rent a car Cluj",
-      "închirieri auto Cluj",
-      "mașini de închiriat Cluj",
-      "rent a car Cluj-Napoca",
-      "închirieri auto aeroport Cluj",
-      "TRT rent a car",
-    ],
+    keywords: locale === "hu"
+      ? [
+          "autóbérlés Kolozsvár",
+          "autókölcsönző Cluj",
+          "bérelhető autó Kolozsvár",
+          "autóbérlés repülőtér Cluj",
+          "TRT rent a car",
+        ]
+      : locale === "en"
+        ? [
+            "car rental Cluj",
+            "car hire Cluj-Napoca",
+            "Cluj airport car rental",
+            "TRT rent a car",
+          ]
+        : [
+            "rent a car Cluj",
+            "închirieri auto Cluj",
+            "mașini de închiriat Cluj",
+            "rent a car Cluj-Napoca",
+            "închirieri auto aeroport Cluj",
+            "TRT rent a car",
+          ],
     icons: {
       icon: "/favicon.png",
     },
@@ -57,6 +72,11 @@ export default function RootLayout({
   return (
     <html lang={locale} className={inter.variable}>
       <body className="min-h-screen flex flex-col bg-dark font-sans">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[hreflang]");if(!a||a.getAttribute("aria-current")==="true")return;e.preventDefault();e.stopPropagation();location.assign(a.href);},true);`,
+          }}
+        />
         <LocaleProvider locale={locale} messages={messages}>
           <AutoRentalSchema />
           <OrganizationWebSiteJsonLd />

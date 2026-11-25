@@ -1,3 +1,4 @@
+import { randomInt } from "crypto";
 import { promises as fs } from "fs";
 import path from "path";
 import type { Reservation, ReservationStatus } from "@/data/reservations";
@@ -28,24 +29,39 @@ export function generateId(): string {
   return Date.now().toString(36) + Math.random().toString(36).slice(2);
 }
 
-const REFERENCE_PREFIX = "8RC";
-const REFERENCE_REGEX = /^8RC(\d{5})$/;
+const REFERENCE_PREFIX = "TRT";
+const REFERENCE_DIGITS = 6;
+const REFERENCE_SPACE = 10 ** REFERENCE_DIGITS;
+const REFERENCE_REGEX = /^TRT(\d{6})$/;
 
-/** Returnează următorul număr de referință: 8RC + 5 cifre (ex: 8RC00001). */
+function formatReference(n: number): string {
+  return REFERENCE_PREFIX + String(n).padStart(REFERENCE_DIGITS, "0");
+}
+
+/** TRT + 6 cifre aleatorii. Un număr nu se repetă până se epuizează toate cele 1.000.000 de combinații. */
 function nextReference(existingReservations: Reservation[]): string {
-  let maxNum = 0;
+  const used = new Set<number>();
   for (const r of existingReservations) {
-    if (r.reference) {
-      const m = r.reference.match(REFERENCE_REGEX);
-      if (m) {
-        const n = parseInt(m[1], 10);
-        if (n > maxNum) maxNum = n;
-      }
-    }
+    const match = r.reference?.match(REFERENCE_REGEX);
+    if (match) used.add(parseInt(match[1], 10));
   }
-  const nextNum = maxNum + 1;
-  const digits = String(nextNum).padStart(5, "0");
-  return REFERENCE_PREFIX + digits;
+
+  if (used.size >= REFERENCE_SPACE) {
+    return formatReference(randomInt(REFERENCE_SPACE));
+  }
+
+  for (let attempt = 0; attempt < 32; attempt++) {
+    const n = randomInt(REFERENCE_SPACE);
+    if (!used.has(n)) return formatReference(n);
+  }
+
+  const start = randomInt(REFERENCE_SPACE);
+  for (let i = 0; i < REFERENCE_SPACE; i++) {
+    const n = (start + i) % REFERENCE_SPACE;
+    if (!used.has(n)) return formatReference(n);
+  }
+
+  return formatReference(randomInt(REFERENCE_SPACE));
 }
 
 export async function createReservation(data: Omit<Reservation, "id" | "reference" | "createdAt" | "updatedAt">): Promise<Reservation> {

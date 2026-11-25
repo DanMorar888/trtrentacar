@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const isDev = process.env.NODE_ENV !== "production";
+
 const nextConfig = {
   trailingSlash: false,
   poweredByHeader: false,
@@ -22,7 +24,7 @@ const nextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 60 * 60 * 24 * 30,
+    minimumCacheTTL: 2592000,
     deviceSizes: [640, 828, 1080, 1200, 1920],
     imageSizes: [64, 96, 128, 256, 384],
   },
@@ -41,9 +43,24 @@ const nextConfig = {
         ],
       },
       {
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: isDev ? "no-store" : "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/_next/image",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=2592000" },
+        ],
+      },
+      {
         source: "/images/:path*",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" },
+          { key: "Cache-Control", value: "public, max-age=2592000" },
         ],
       },
       {

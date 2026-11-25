@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { cookies } from "next/headers";
 
-export default function AdminDashboardPage() {
+export default async function AdminDashboardPage() {
+  const cookieStore = await cookies();
+  const limited = cookieStore.get("admin_role")?.value === "limited";
+
   return (
     <div>
       <h1 className="text-2xl font-bold text-white">Panou admin</h1>
@@ -11,15 +15,19 @@ export default function AdminDashboardPage() {
           className="rounded-xl border border-gray-600 bg-gray-800/50 p-6 shadow-sm hover:border-primary hover:shadow-md"
         >
           <h2 className="font-semibold text-white">Mașini</h2>
-          <p className="mt-1 text-sm text-gray-400">Vezi, adaugă, editează sau șterge mașinile din flotă.</p>
+          <p className="mt-1 text-sm text-gray-400">
+            {limited ? "Vezi și editează mașinile din flotă." : "Vezi, adaugă, editează sau șterge mașinile din flotă."}
+          </p>
         </Link>
-        <Link
-          href="/admin/cars/new"
-          className="rounded-xl border border-gray-600 bg-gray-800/50 p-6 shadow-sm hover:border-primary hover:shadow-md"
-        >
-          <h2 className="font-semibold text-white">Adaugă mașină</h2>
-          <p className="mt-1 text-sm text-gray-400">Adaugă o mașină nouă cu toate detaliile și poza.</p>
-        </Link>
+        {!limited && (
+          <Link
+            href="/admin/cars/new"
+            className="rounded-xl border border-gray-600 bg-gray-800/50 p-6 shadow-sm hover:border-primary hover:shadow-md"
+          >
+            <h2 className="font-semibold text-white">Adaugă mașină</h2>
+            <p className="mt-1 text-sm text-gray-400">Adaugă o mașină nouă cu toate detaliile și poza.</p>
+          </Link>
+        )}
         <Link
           href="/admin/seasons"
           className="rounded-xl border border-gray-600 bg-gray-800/50 p-6 shadow-sm hover:border-primary hover:shadow-md"

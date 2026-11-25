@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { AboutStats } from "@/components/AboutStats";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
 import { LazyMap } from "@/components/LazyMap";
@@ -96,9 +96,9 @@ export function AboutPageContent() {
               </article>
             ))}
           </div>
-          <Link href="/inchirieri-masini-cluj" className="btn-primary mt-8">
+          <LocaleLink href="/inchirieri-masini-cluj" className="btn-primary mt-8">
             {t.nav.cars}
-          </Link>
+          </LocaleLink>
         </div>
       </section>
 

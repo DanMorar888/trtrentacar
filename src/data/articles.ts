@@ -15,14 +15,16 @@ export const articles: Article[] = [
     id: "1",
     slug: "de-ce-sa-alegi-masina-4x4-iarna-cluj",
     date: "2026-01-08",
-    image: "/images/cars/ford-kuga-automat-7.jpg",
+    image: "/images/cars/ford-kuga-automat-7.webp",
     title: {
       ro: "De ce să alegi o mașină de închiriat 4x4 pe timp de iarna în Cluj-Napoca?",
       en: "Why choose a 4x4 rental car in winter in Cluj-Napoca?",
+      hu: "Miért válassz 4x4 bérelt autót télen Kolozsváron?",
     },
     excerpt: {
       ro: "Fie că ai drumuri în afara orașului sau vrei pur și simplu mai multă încredere la volan, o mașină cu tracțiune integrală poate face diferența în sezonul rece.",
       en: "Whether you are driving out of town or just want more confidence behind the wheel, an all-wheel-drive car can make the difference in the cold season.",
+      hu: "Akár városon kívül mész, akár magabiztosabban szeretnél vezetni, egy összkerékhajtású autó télen sokat számít.",
     },
     content: {
       ro: `
@@ -45,20 +47,32 @@ export const articles: Article[] = [
       </ul>
       <p>Book your 4x4 in one click and enjoy winter safely.</p>
     `,
+      hu: `
+      <p>Kolozsváron és Erdélyben a tél havat és jeget hozhat. A TRT Rent a Car-tól bérelt 4x4 biztonságot és kontrollt ad nehéz körülmények között.</p>
+      <p>Előnyök:</p>
+      <ul>
+        <li>Összkerékhajtás havon és jégen</li>
+        <li>Magabiztosság a hegyi utakon</li>
+        <li>SUV modellek: Ford Kuga automata, BMW X1 automata</li>
+      </ul>
+      <p>Foglald le a 4x4-et egy kattintással, és töltsd a telet biztonságban.</p>
+    `,
     },
   },
   {
     id: "2",
     slug: "masini-inchiriat-sarbatori",
     date: "2025-12-05",
-    image: "/images/cars/ford-puma-automat-1.jpg",
+    image: "/images/cars/ford-puma-automat-1.webp",
     title: {
       ro: "Ce mașini de închiriat sunt potrivite pentru perioada sărbătorilor?",
       en: "Which rental cars are best for the holiday season?",
+      hu: "Melyik bérelt autó a jó választás az ünnepekre?",
     },
     excerpt: {
       ro: "Perioada sărbătorilor vine cu drumuri mai multe. Alegerea mașinii potrivite ține de confort, spațiu și siguranță.",
       en: "The holidays mean more trips. Choosing the right car comes down to comfort, space and safety.",
+      hu: "Ünnepekkor több az út. A jó autó kényelem, hely és biztonság kérdése.",
     },
     content: {
       ro: `
@@ -81,20 +95,32 @@ export const articles: Article[] = [
       </ul>
       <p>Book online or via WhatsApp. Free pick-up and drop-off at Cluj Airport.</p>
     `,
+      hu: `
+      <p>Ünnepekkor, akár családhoz mész, a hegyekbe vagy a városban maradsz, megbízható és tágas autóra van szükség.</p>
+      <p>A TRT Rent a Car ajánlja:</p>
+      <ul>
+        <li>Családnak: Ford Kuga automata, BMW X1 automata</li>
+        <li>Kényelemre: Hyundai Elantra, Ford Puma automata</li>
+        <li>Takarékosra: Renault Clio, Ford Fiesta</li>
+      </ul>
+      <p>Foglalni online vagy WhatsAppon lehet. Ingyenes átvétel és leadás a kolozsvári repülőtéren.</p>
+    `,
     },
   },
   {
     id: "3",
     slug: "rent-a-car-cluj-de-ce-888",
     date: "2025-11-05",
-    image: "/images/cars/logo-header.jpg",
+    image: "/images/cars/logo-header.webp",
     title: {
       ro: "Rent a Car Cluj – De ce tot mai mulți șoferi aleg TRT Rent a Car",
       en: "Car rental Cluj – Why more drivers choose TRT Rent a Car",
+      hu: "Autóbérlés Kolozsvár – Miért választja egyre több vezető a TRT Rent a Car-t",
     },
     excerpt: {
       ro: "Servicii de închirieri auto Cluj la standarde profesionale: flotă variată, prețuri transparente, predare gratuită la aeroport.",
       en: "Professional car rental in Cluj: varied fleet, transparent prices, free airport delivery.",
+      hu: "Professzionális autóbérlés Kolozsváron: változatos flotta, átlátható árak, ingyenes átadás a repülőtéren.",
     },
     content: {
       ro: `
@@ -119,20 +145,33 @@ export const articles: Article[] = [
       </ul>
       <p>Contact: rezervari@trtrentacar.ro or WhatsApp.</p>
     `,
+      hu: `
+      <p>A TRT Rent a Car autót ad bérbe Kolozsváron és a kolozsvári nemzetközi repülőtéren. A kiírt ár a végleges ár, rejtett díjak nélkül.</p>
+      <p>Előnyök:</p>
+      <ul>
+        <li>Ingyenes átvétel és leadás a telephelyen és a repülőtéren</li>
+        <li>ÁFA, kötelező biztosítás, casco és téli gumi benne van</li>
+        <li>Előleg nélkül foglalhatsz (szokásos feltételek mellett)</li>
+        <li>Gyors foglalás a weboldalon vagy WhatsAppon</li>
+      </ul>
+      <p>Kapcsolat: rezervari@trtrentacar.ro vagy WhatsApp.</p>
+    `,
     },
   },
   {
     id: "4",
     slug: "intrebari-frecvente-despre-serviciile-de-rent-a-car-in-cluj-napoca",
     date: "2024-04-06",
-    image: "/images/blog/cluj-napoca-01.jpg",
+    image: "/images/blog/cluj-napoca-01.webp",
     title: {
       ro: "Întrebări frecvente despre serviciile de rent a car în Cluj-Napoca: tot ce trebuie să știi",
       en: "Frequently asked questions about car rental in Cluj-Napoca: everything you need to know",
+      hu: "Gyakori kérdések az autóbérlésről Kolozsváron: amit tudni érdemes",
     },
     excerpt: {
       ro: "Închirierea unei mașini poate fi soluția ideală pentru vacanță, o călătorie de afaceri sau un vehicul temporar. Am adunat cele mai frecvente întrebări de la clienții din Cluj-Napoca.",
       en: "Renting a car can be the right choice for a holiday, a business trip or a temporary vehicle. Here are the questions we hear most often from customers in Cluj-Napoca.",
+      hu: "Az autóbérlés jó választás lehet nyaraláshoz, üzleti úthoz vagy átmeneti autóhoz. Összegyűjtöttük a kolozsvári ügyfelek leggyakoribb kérdéseit.",
     },
     content: {
       ro: `
@@ -205,20 +244,57 @@ export const articles: Article[] = [
       <p>International travel is allowed only with prior agreement from TRT Rent a Car. Tell us your destinations so we can grant permission and prepare the necessary documents.</p>
       <p>TRT Rent a Car in Cluj-Napoca offers flexible, accessible transport for your needs. Whether you need a car for a few days or for a longer period, we are here to help. Contact us to find out more and book the right car for you.</p>
     `,
+      hu: `
+      <p>Az autóbérlés jó megoldás lehet az utazáshoz, akár nyaralsz, üzleti úton vagy, vagy csak átmenetileg kell egy autó. Ha Kolozsváron keresel autókölcsönzőt, ez az útmutató neked szól. Összegyűjtöttük a leggyakoribb kérdéseket, hogy minden fontos információ meglegyen.</p>
+      <h2>1. Miért válaszd a TRT Rent a Car-t Kolozsváron?</h2>
+      <p>A TRT Rent a Car a minőségre, a szakmaiságra és az ügyfél elégedettségére figyel. Jól karbantartott autókat kínálunk, a takarékos modellektől a SUV-okig és a prémium autókig. Ügyfélszolgálatunk és áraink is versenyképesek.</p>
+      <h2>2. Milyen iratok kellenek az autóbérléshez?</h2>
+      <p>A TRT Rent a Car autóbérléséhez szükséged van:</p>
+      <ul>
+        <li>Érvényes vezetői engedélyre (belföldi vagy nemzetközi).</li>
+        <li>Személyazonosító okmányra (személyi igazolvány vagy útlevél).</li>
+      </ul>
+      <h2>3. Hány éves kortól lehet autót bérelni?</h2>
+      <p>A TRT Rent a Car-nál az alsó korhatár 21 év, és a vezetőnek legalább egy éve érvényes vezetői engedéllyel kell rendelkeznie.</p>
+      <h2>4. Mi van benne a bérleti díjban?</h2>
+      <p>A bérleti díj tartalmazza:</p>
+      <ul>
+        <li>A jármű használatát a megbeszélt időre.</li>
+        <li>Az alapbiztosítást (kötelező felelősség).</li>
+        <li>Korlátlan kilométert egyes kategóriáknál.</li>
+        <li>0–24 órás assistance szolgáltatást.</li>
+      </ul>
+      <p>A teljes casco, a GPS, a gyerekülés vagy a plusz vezető külön díj ellenében kérhető.</p>
+      <h2>5. Hogyan lehet foglalni?</h2>
+      <p>Online, a weboldalon, vagy telefonon foglalhatsz. Érdemes minél hamarabb foglalni, hogy a kívánt autó szabad legyen.</p>
+      <h2>6. Milyen feltételekkel lehet lemondani?</h2>
+      <p>A foglalás díjmentesen lemondható legalább 48 órával az átvétel előtt. Ha 48 órán belül mondod le, lemondási díjat számíthatunk fel.</p>
+      <h2>7. Mit tegyek baleset vagy meghibásodás esetén?</h2>
+      <p>Balesetnél azonnal értesítsd a hatóságokat, és kérj rendőrségi jegyzőkönyvet. Minket is hívj minél hamarabb. Meghibásodásnál az assistance csapatunk 0–24 órában elérhető.</p>
+      <h2>8. Le lehet adni az autót másik helyen?</h2>
+      <p>Igen, az autót az átvételtől eltérő helyen is le lehet adni, külön díj ellenében. Ezt a foglaláskor kell jelezni.</p>
+      <h2>9. Lehet hosszabb időre autót bérelni?</h2>
+      <p>Igen, hosszú távú bérlést is vállalunk. Írj vagy hívj, és megbeszéljük a díjakat és a feltételeket.</p>
+      <h2>10. Lehet a bérelt autóval külföldre utazni?</h2>
+      <p>Külföldi utazás csak a TRT Rent a Car előzetes beleegyezésével lehetséges. A célországokat előre jelezni kell, hogy engedélyt és iratokat adjunk.</p>
+      <p>A TRT Rent a Car Kolozsváron rugalmas és elérhető megoldást ad. Akár néhány napra, akár hosszabb időre kell autó, segítünk. Keress minket, és foglald le a megfelelő autót.</p>
+    `,
     },
   },
   {
     id: "5",
     slug: "top-destinatii-de-weekend-langa-cluj",
     date: "2024-04-06",
-    image: "/images/blog/apuseni.jpg",
+    image: "/images/blog/apuseni.webp",
     title: {
       ro: "Top destinații de weekend lângă Cluj: descoperă frumusețea Transilvaniei",
       en: "Top weekend destinations near Cluj: discover the beauty of Transylvania",
+      hu: "A legjobb hétvégi úti célok Kolozsvár mellett: fedezd fel Erdélyt",
     },
     excerpt: {
       ro: "Cluj-Napoca este poarta către destinații de weekend pline de aventură și relaxare. Cinci locuri spectaculoase, la o distanță scurtă de oraș.",
       en: "Cluj-Napoca is the gateway to weekend destinations full of adventure and relaxation. Five striking places, a short drive from the city.",
+      hu: "Kolozsvár a kapu a hétvégi kirándulásokhoz, kalandhoz és pihenéshez. Öt szép hely, rövid autóútra a várostól.",
     },
     content: {
       ro: `
@@ -248,6 +324,20 @@ export const articles: Article[] = [
       <h2>5. Păltiniș mountain resort</h2>
       <p>If you are looking for a mountain escape, Păltiniș is the perfect destination. About two hours' drive from Cluj-Napoca, the resort offers spectacular scenery, fresh mountain air and a variety of activities. You can hike the trails, ski in the cold season or simply enjoy a hot coffee in one of the resort's cosy restaurants.</p>
       <p>Whatever you prefer, these weekend destinations near Cluj promise memorable experiences and a fresh burst of energy for the weeks ahead. Pack your bags and set off to see the beauty of Transylvania.</p>
+    `,
+      hu: `
+      <p>Kolozsvár élénk, történelmi város, és innen könnyű elindulni egy hétvégére, kalandra vagy pihenésre. Ha ki szeretnél szakadni a város zajából, ezt az öt helyet érdemes megnézni, mind közel van Kolozsvárhoz.</p>
+      <h2>1. A bonchidai Bánffy-kastély</h2>
+      <p>Rövid autóútra Kolozsvártól ott a bonchidai Bánffy-kastély, történelmi és szép épület. A kastély a XV. századból való, és bepillantást ad Erdély múltjába. Megnézheted a gondozott kerteket, a kiállításokat, és a kulturális programokat is.</p>
+      <h2>2. A tarnicai tó</h2>
+      <p>A természet és a kaland kedvelőinek a tarnicai tó nyugodt hétvégét ad. Kolozsvártól körülbelül egy óra autóval, csendes és szép hely. Kajakkal vagy kenuval bejárhatod a vizet, vagy kipróbálhatod a kitesurföt is.</p>
+      <h2>3. A Tordai-hasadék</h2>
+      <p>Aki a szabadban szeret lenni, a Tordai-hasadékot ne hagyja ki. Közel van Kolozsvárhoz, és jó hely túrához, sziklamászáshoz és fotózáshoz. A sziklák, az ösvények és a hegyi levegő mind ott vannak.</p>
+      <h2>4. Az Alba Carolina erőd Gyulafehérváron</h2>
+      <p>Gyulafehérvár körülbelül hetven kilométerre van Kolozsvártól, és Erdély történelmének a közepére visz. Az Alba Carolina erőd XVIII. századi épület, falakkal, bástyákkal és történelmi programokkal.</p>
+      <h2>5. A Păltiniș üdülőhely</h2>
+      <p>Hegyi pihenéshez Păltiniș a jó választás. Kolozsvártól körülbelül két óra autóval, szép tájjal, hegyi levegővel és sok programmal. Túrázhatsz, télen síelhetsz, vagy megállhatsz egy kávéra a szállások éttermeiben.</p>
+      <p>Bármelyiket választod, ezek a kolozsvári hétvégi utak emlékezetesek maradnak. Csomagolj, és indulj Erdélybe.</p>
     `,
     },
   },

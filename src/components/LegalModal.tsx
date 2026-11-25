@@ -7,6 +7,7 @@ import { LegalDocument } from "@/components/LegalDocument";
 import { termsContent } from "@/components/legal/TermsContent";
 import { privacyContent } from "@/components/legal/PrivacyContent";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { localePath } from "@/i18n/paths";
 
 export type LegalDoc = "terms" | "privacy";
 
@@ -29,7 +30,8 @@ export function LegalDocLink({
   children: ReactNode;
   className?: string;
 }) {
-  const href = DOC_HREF[doc];
+  const { locale } = useI18n();
+  const href = localePath(locale, DOC_HREF[doc]);
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     if (e.defaultPrevented) return;

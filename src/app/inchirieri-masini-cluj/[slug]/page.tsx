@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { Suspense } from "react";
 import { siteConfig } from "@/config/site";
 import { CarDetailJsonLd } from "@/components/JsonLd";
@@ -73,9 +73,9 @@ export default async function CarDetailPage({ params }: PageProps) {
       <section className="section-dark py-8">
         <div className="container-narrow">
           <nav className="mb-4 text-sm text-gray-400" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-primary">{t.car.home}</Link>
+            <LocaleLink href="/" className="hover:text-primary">{t.car.home}</LocaleLink>
             <span className="mx-2">/</span>
-            <Link href="/inchirieri-masini-cluj" className="hover:text-primary">{t.car.cars}</Link>
+            <LocaleLink href="/inchirieri-masini-cluj" className="hover:text-primary">{t.car.cars}</LocaleLink>
             <span className="mx-2">/</span>
             <span className="font-medium text-white">{car.name}</span>
           </nav>
@@ -85,7 +85,7 @@ export default async function CarDetailPage({ params }: PageProps) {
                 images={[car.image, ...(car.gallery ?? [])]}
                 alt={car.name}
                 className="rounded-xl"
-                sizes="(max-width: 1024px) 100vw, 66vw"
+                sizes="(max-width: 1023px) calc(100vw - 2rem), 66vw"
               />
               <h1 className="mt-6 text-2xl font-bold text-white">{car.name}</h1>
               <p className="mt-2 text-base text-gray-300">

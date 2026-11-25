@@ -1,22 +1,23 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { verifyAdminToken, getCookieName } from "@/lib/admin-auth";
+import { getAdminRole, getCookieName } from "@/lib/admin-auth";
+import type { AdminRole } from "@/lib/admin-credentials";
 import { readCars, writeCars, getCarById, slugFromName } from "@/lib/cars-db";
 import { CATEGORY_LABELS, DAY_INTERVALS } from "@/data/cars";
 import type { Car, CarCategory, DayIntervalKey, PricingByInterval } from "@/data/cars";
 
-async function isAdmin(): Promise<boolean> {
+async function adminRole(): Promise<AdminRole | null> {
   const cookieStore = await cookies();
   const token = cookieStore.get(getCookieName())?.value ?? null;
-  return verifyAdminToken(token);
+  return getAdminRole(token);
 }
 
 export async function PUT(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const ok = await isAdmin();
-  if (!ok) return NextResponse.json({ error: "Neautorizat" }, { status: 401 });
+  const role = await adminRole();
+  if (!role) return NextResponse.json({ error: "Neautorizat" }, { status: 401 });
 
   const { id } = await params;
   const body = await request.json();
@@ -93,8 +94,11 @@ export async function DELETE(
   _request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const ok = await isAdmin();
-  if (!ok) return NextResponse.json({ error: "Neautorizat" }, { status: 401 });
+  const role = await adminRole();
+  if (!role) return NextResponse.json({ error: "Neautorizat" }, { status: 401 });
+  if (role === "limited") {
+    return NextResponse.json({ error: "Nu poți șterge mașini." }, { status: 403 });
+  }
 
   const { id } = await params;
   const cars = await readCars();

@@ -19,7 +19,7 @@ export function openGraphDefaultImages():
   return [{ url, width: 1200, height: 630, alt: siteConfig.name }];
 }
 
-export const ORGANIZATION_LOGO_URL = `${SITE_URL}/images/cars/logo-header.jpg`;
+export const ORGANIZATION_LOGO_URL = `${SITE_URL}/images/cars/logo-header.webp`;
 
 export const ORGANIZATION_ID = `${SITE_URL}/#organization` as const;
 

@@ -505,7 +505,7 @@ export function CheckoutForm({
                     alt={selectedCar.name}
                     fallbackName={selectedCar.name}
                     className="!absolute inset-0 !object-cover"
-                    sizes="(max-width: 1024px) 100vw, 600px"
+                    sizes="(max-width: 1023px) calc(100vw - 2rem), 600px"
                   />
                   {selectedCarImages.length > 1 && (
                     <>

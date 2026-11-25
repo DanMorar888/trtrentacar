@@ -30,6 +30,15 @@ const copy = {
     next: "Next reviews",
     stars: (n: number) => `${n} out of 5 stars`,
   },
+  hu: {
+    basedOn: (count: number) => `${count} vélemény alapján`,
+    seeOnGoogle: "Megtekintés Google-ön",
+    readMore: "Több",
+    readLess: "Kevesebb",
+    prev: "Előző vélemények",
+    next: "Következő vélemények",
+    stars: (n: number) => `${n} az 5 csillagból`,
+  },
 } as const;
 
 function GoogleMark({ className }: { className?: string }) {
@@ -82,7 +91,7 @@ export function GoogleReviewsWidget({
   const cards = selectFiveStarReviews(reviews);
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const light = tone === "light";
-  const ratingLabel = place.rating.toLocaleString(locale === "ro" ? "ro-RO" : "en-US", {
+  const ratingLabel = place.rating.toLocaleString(locale === "hu" ? "hu-HU" : locale === "en" ? "en-US" : "ro-RO", {
     minimumFractionDigits: 1,
     maximumFractionDigits: 1,
   });

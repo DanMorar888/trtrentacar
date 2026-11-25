@@ -61,6 +61,17 @@ export function formatReviewAge(locale: Locale, age: ReviewAge): string {
     return amount === 1 ? labels[age.unit][0] : labels[age.unit][1];
   }
 
+  if (locale === "hu") {
+    const labels: Record<ReviewAgeUnit, [string, string]> = {
+      hour: ["1 órája", `${amount} órája`],
+      day: ["1 napja", `${amount} napja`],
+      week: ["1 hete", `${amount} hete`],
+      month: ["1 hónapja", `${amount} hónapja`],
+      year: ["1 éve", `${amount} éve`],
+    };
+    return amount === 1 ? labels[age.unit][0] : labels[age.unit][1];
+  }
+
   if (age.unit === "hour") return amount === 1 ? "acum o oră" : `acum ${amount} ore`;
   if (age.unit === "day") return amount === 1 ? "acum o zi" : `acum ${amount} zile`;
   if (age.unit === "week") return amount === 1 ? "acum o săptămână" : `acum ${amount} săptămâni`;

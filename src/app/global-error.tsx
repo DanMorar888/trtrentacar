@@ -2,11 +2,13 @@
 
 import { useEffect, useMemo } from "react";
 import { dictionaries } from "@/i18n/messages";
+import type { Locale } from "@/i18n/config";
 
-function readLocaleFromCookie(): "ro" | "en" {
+function readLocaleFromCookie(): Locale {
   if (typeof document === "undefined") return "ro";
   const match = document.cookie.match(/(?:^|; )NEXT_LOCALE=([^;]*)/);
-  return match?.[1] === "en" ? "en" : "ro";
+  const value = match?.[1] ? decodeURIComponent(match[1]) : "";
+  return value === "en" || value === "hu" ? value : "ro";
 }
 
 export default function GlobalError({

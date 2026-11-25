@@ -10,6 +10,7 @@ import { DateField } from "@/components/DateField";
 import { rentalDaysBetween } from "@/lib/rental-days";
 import { TimeSelect } from "@/components/TimeSelect";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { localePath } from "@/i18n/paths";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
 import { LegalDocLink, LegalModal, type LegalDoc } from "@/components/LegalModal";
 import { interpolate } from "@/i18n/interpolate";
@@ -69,10 +70,12 @@ export function TarifeContent({ cars, seasons = [] }: TarifeContentProps) {
         : days != null && days > 0
           ? Math.round(pricePerDay * days)
           : null;
-    const href =
+    const href = localePath(
+      locale,
       days != null && pickupDate && returnDate
         ? `/rezervare?car=${car.slug}&pickup=${pickupDate}&return=${returnDate}&pickupTime=${pickupTime || "10:00"}&returnTime=${returnTime || "10:00"}&loc=${pickupLocation}&returnLoc=${returnLocation}`
-        : `/rezervare?car=${car.slug}`;
+        : `/rezervare?car=${car.slug}`
+    );
     return { car, scdwPerDay, pricePerDay, total, href };
   });
 
@@ -86,7 +89,7 @@ export function TarifeContent({ cars, seasons = [] }: TarifeContentProps) {
     if (pickupLocation) params.set("loc", pickupLocation);
     if (returnLocation) params.set("returnLoc", returnLocation);
     const query = params.toString();
-    router.push(`/inchirieri-masini-cluj${query ? `?${query}` : ""}`);
+    router.push(localePath(locale, `/inchirieri-masini-cluj${query ? `?${query}` : ""}`));
   };
 
   const selectClass =

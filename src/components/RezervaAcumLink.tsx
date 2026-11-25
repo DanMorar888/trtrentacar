@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { localePath } from "@/i18n/paths";
 
 interface RezervaAcumLinkProps {
   carSlug: string;
@@ -12,7 +13,7 @@ interface RezervaAcumLinkProps {
 
 /** Link „Rezerva acum” care include întotdeauna parametrii din URL (pickup, return, loc, returnLoc). */
 export function RezervaAcumLink({ carSlug, className, children }: RezervaAcumLinkProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const searchParams = useSearchParams();
   const pickup = searchParams.get("pickup") ?? "";
   const returnParam = searchParams.get("return") ?? "";
@@ -30,7 +31,7 @@ export function RezervaAcumLink({ carSlug, className, children }: RezervaAcumLin
   if (loc) params.set("loc", loc);
   if (returnLoc) params.set("returnLoc", returnLoc);
 
-  const href = `/rezervare?${params.toString()}`;
+  const href = localePath(locale, `/rezervare?${params.toString()}`);
 
   return (
     <Link href={href} className={className}>

@@ -1,26 +1,36 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
-  { href: "/admin", label: "Admin TRT", exact: true },
-  { href: "/admin/cars", label: "Mașini", exact: false },
-  { href: "/admin/cars/new", label: "Adaugă mașină", exact: true },
-  { href: "/admin/seasons", label: "Sezoane", exact: false },
-  { href: "/admin/rezervari", label: "Rezervări", exact: false },
-  { href: "/admin/newsletter", label: "Newsletter", exact: false },
+  { href: "/admin", label: "Admin TRT", exact: true, fullOnly: false },
+  { href: "/admin/cars", label: "Mașini", exact: false, fullOnly: false },
+  { href: "/admin/cars/new", label: "Adaugă mașină", exact: true, fullOnly: true },
+  { href: "/admin/seasons", label: "Sezoane", exact: false, fullOnly: false },
+  { href: "/admin/rezervari", label: "Rezervări", exact: false, fullOnly: false },
+  { href: "/admin/newsletter", label: "Newsletter", exact: false, fullOnly: false },
 ];
+
+function isLimitedAdmin(): boolean {
+  return document.cookie.split("; ").some((part) => part === "admin_role=limited");
+}
 
 export function AdminHeader() {
   const pathname = usePathname();
+  const [limited, setLimited] = useState<boolean | null>(null);
+  useEffect(() => {
+    setLimited(isLimitedAdmin());
+  }, [pathname]);
   if (pathname === "/admin/login") return null;
+  const links = NAV_LINKS.filter((link) => !(link.fullOnly && limited !== false));
 
   return (
     <header className="border-b border-gray-700 bg-dark shadow-sm">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
         <nav className="flex min-w-0 flex-wrap items-center gap-x-4 gap-y-2">
-          {NAV_LINKS.map((link) => {
+          {links.map((link) => {
             const active = link.exact
               ? pathname === link.href
               : link.href === "/admin/cars"
